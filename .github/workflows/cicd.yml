@@ -39,7 +39,6 @@ jobs:
         run: |
           conda info
           conda config --add channels conda-forge
-          conda install obspy
 
       - name: Make docs
         if: matrix.python-version == '3.8'

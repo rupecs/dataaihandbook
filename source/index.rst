@@ -1,14 +1,35 @@
-.. Sphinx-with-Github-Pages documentation master file, created by
-   sphinx-quickstart on Tue Jun 29 11:06:11 2021.
+.. SphinxGHP documentation master file, created by
+   sphinx-quickstart on Tue May 25 18:45:38 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Sphinx-with-Github-Pages's documentation!
-====================================================
+.. image:: /Images/homepage.png
+  :align: center
+
+Welcome to Sphinx with GitHub's documentation!
+==============================================
+
+This is a quick tutorial to introduce how to use Sphinx to auto create
+a GitHub Pages documentation.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Quick Links
+
+   links
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Getting Started
+
+   install
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Modules
+
+   sphnix
+   github_page
 
 
 
