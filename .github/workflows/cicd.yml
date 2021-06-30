@@ -39,6 +39,7 @@ jobs:
         run: |
           conda info
           conda config --add channels conda-forge
+          pip install -e .
 
       - name: Make docs
         if: matrix.python-version == '3.8'
