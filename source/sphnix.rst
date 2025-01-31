@@ -52,16 +52,13 @@ Codes
 
   .. note::
 
-    Use *.. code-block:: python* to note the following sections are python codes.
+    Use *.. code block python* to note the following sections are python codes.
 
   Example:
 
-  .. code-block:: python
-      #Here's a simple sample to input codes:
-      #Type in .. code-block:: python
-          #Write your codes Here
-          #i.e. Python
-          print("Hello Sphinx!")
+.. code-block:: python
+
+    print("Hello Sphinx!") #This is a comment
 
 Tabels
 ---------------
@@ -84,7 +81,7 @@ Tabels
 
 .. csv-table:: Student Information 2
     :header: Name,Sex,Age,Address
-    :width:15 10 30 30
+    :widths: 15 10 30 30
 
     Lisa,Female,20,160 Chapel st.
     John,Male,23,172 Albert st.
