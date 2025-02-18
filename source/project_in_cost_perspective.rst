@@ -52,3 +52,74 @@ Risks include data quality issues, model overfitting, and integration challenges
 This proposal presents a well-structured approach to harnessing machine learning for predictive analytics in credit risk management. By investing an estimated AUD 250,000, the bank stands to significantly reduce default rates, enhancing both its risk management capabilities and overall profitability. The next steps include securing senior management approval, finalizing the project team, and initiating the data collection phase. Regular progress updates and performance reports will be shared with key stakeholders to ensure transparency and alignment with the bank’s strategic objectives.
 
 Implementing this project positions the bank at the forefront of data-driven decision-making in the lending sector, paving the way for future innovations and competitive advantage in an increasingly data-centric market.
+
+*Worked Example Cost Saving
+
+Below is an illustration of the dollar impact of a customer default, using the average scenario described in the report (i.e., an average loan size of AUD 250,000, a portfolio of AUD 500 million, and an assumed recovery rate of around 50%):
+
+---
+
+### 1. Direct Financial Losses
+
+- **Loan Principal and Interest:**  
+  For an average loan of AUD 250,000, if a customer defaults, the bank loses the remaining principal and the expected interest. Assuming that collateral or recovery efforts secure about 50% of the loan value, the bank incurs a **net loss of roughly AUD 125,000** per default.
+
+---
+
+### 2. Increased Loan Loss Provisions
+
+- **Regulatory Requirements:**  
+  Banks must maintain reserves (loan loss provisions) that reflect expected losses. With an average loss of approximately AUD 125,000 per default, if defaults rise by even 1% across the portfolio, the bank’s provisioning needs increase significantly.  
+  - **Example Calculation:**  
+    - Total loans = AUD 500 million / AUD 250,000 ≈ 2,000 loans  
+    - At a 5% default rate, about 100 loans default.  
+    - A 1 percentage point reduction (from 5% to 4%) equates to about 20 fewer defaults.  
+    - Direct saving in default losses = 20 defaults × AUD 125,000 ≈ **AUD 2.5 million** in avoided losses, which also helps reduce the required loan loss provisions.
+
+---
+
+### 3. Operational and Recovery Costs
+
+- **Additional Expenses:**  
+  In the event of a default, banks incur extra costs such as collection efforts, legal fees, and administrative overhead. Typically, these costs can add another **5–10% of the defaulted loan’s value**.  
+  - For an average loan of AUD 250,000, this equates to an additional **AUD 12,500 to AUD 25,000** per default in recovery and legal expenses.
+
+---
+
+### 4. Regulatory and Capital Implications
+
+- **Capital Buffers:**  
+  A higher default rate forces the bank to allocate more capital as a buffer against potential losses. For every default leading to a net loss of about AUD 125,000, the bank may need to hold additional capital equivalent to that loss.
+  - **Opportunity Cost:**  
+    Assuming an annual cost (or opportunity cost) of around 3% on this tied-up capital, each default could indirectly cost the bank roughly **AUD 3,750** (i.e., 3% of AUD 125,000) in potential earnings foregone.
+
+---
+
+### 5. Reputational Impact and Indirect Costs
+
+- **Market and Customer Trust:**  
+  While more challenging to quantify directly, a rising default rate can negatively affect the bank’s reputation. This could lead to:
+  - **Increased Cost of Capital:** Investors may demand higher returns, indirectly raising financing costs.
+  - **Potential Revenue Losses:** Reduced customer confidence may result in fewer new accounts or loans.
+  - **Estimated Impact:** Although variable, these factors could add an indirect cost of around **1–2% of the loan’s value** (approximately **AUD 2,500 to AUD 5,000** per default).
+
+---
+
+### Overall Impact on the Portfolio
+
+Given the above, for an individual default on an average loan, the total economic impact might break down as follows:
+
+- **Direct Loss:** ~AUD 125,000  
+- **Operational/Recovery Costs:** +AUD 12,500 to AUD 25,000  
+- **Opportunity Cost (Capital Reserve):** +~AUD 3,750  
+- **Indirect/Reputational Impact:** +AUD 2,500 to AUD 5,000
+
+This suggests that a single default could cost the bank between **AUD 143,750 and AUD 158,750** in combined direct and indirect expenses.
+
+Extrapolating to the portfolio, a 1 percentage point improvement (i.e., 20 fewer defaults among 2,000 loans) could directly save around **AUD 2.5 million** and potentially more when considering the secondary impacts on operational and capital costs.
+
+---
+
+These figures underscore the critical financial and operational consequences of customer defaults and highlight the value of predictive models to proactively reduce default rates and manage risk.
+
+
