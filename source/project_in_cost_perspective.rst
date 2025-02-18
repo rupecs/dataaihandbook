@@ -9,62 +9,39 @@ Business Context and Objectives
 -------------------------------
 In the competitive Australian lending environment, minimizing credit risk is a critical priority. Currently, the bank experiences a customer default rate of approximately 5%. Given the average loan size of AUD 250,000, the estimated annual exposure in defaults could be significant. By implementing a predictive model, the aim is to reduce the default rate by at least 1 percentage point, which, on a portfolio of AUD 500 million, translates to a reduction in potential default losses by approximately AUD 2.5 million per annum.
 
-The key objectives are:
-  
-1. **Improve Risk Assessment:**  
-   Enhance existing credit risk frameworks by integrating predictive analytics.
-  
-2. **Reduce Defaults:**  
-   Identify customers at high risk of default, allowing proactive risk mitigation measures.
-  
-3. **Increase Profitability:**  
-   Decrease credit losses and optimize lending decisions, leading to improved financial performance.
+The key objectives are:  
+1. **Improve Risk Assessment:** Enhance existing credit risk frameworks by integrating predictive analytics.  
+2. **Reduce Defaults:** Identify customers at high risk of default, allowing proactive risk mitigation measures.  
+3. **Increase Profitability:** Decrease credit losses and optimize lending decisions, leading to improved financial performance.
 
 Project Phasing and Timeline
 ----------------------------
 The project is designed to be executed over a 6-month period, divided into three primary phases:
 
-1. **Data Collection & Preparation (Month 1-2):**
-   - **Data Sources:**  
-     Gather internal customer data (credit history, transaction records, and demographic information) and supplement with external credit bureau data.
-   - **Data Cleaning:**  
-     Invest in data validation, cleansing, and integration efforts to ensure data quality.
-   - **Budget Allocation:**  
-     Estimated at AUD 50,000, covering data procurement, software tools, and specialist data engineering support.
+1. **Data Collection & Preparation (Month 1-2):**  
+   - **Data Sources:** Gather internal customer data (credit history, transaction records, and demographic information) and supplement with external credit bureau data.  
+   - **Data Cleaning:** Invest in data validation, cleansing, and integration efforts to ensure data quality.  
+   - **Budget Allocation:** Estimated at AUD 50,000, covering data procurement, software tools, and specialist data engineering support.
 
-2. **Model Development & Validation (Month 3-4):**
-   - **Algorithm Selection:**  
-     Evaluate several machine learning algorithms (e.g., logistic regression, decision trees, ensemble methods) to identify the best fit for the dataset.
-   - **Model Training:**  
-     Utilize historical default data to train the model, optimizing for both precision and recall.
-   - **Validation & Testing:**  
-     Implement robust cross-validation techniques and A/B testing against current risk models.
-   - **Budget Allocation:**  
-     Approximately AUD 120,000, inclusive of internal data science hours, potential external consultancy fees, and computational resources.
+2. **Model Development & Validation (Month 3-4):**  
+   - **Algorithm Selection:** Evaluate several machine learning algorithms (e.g., logistic regression, decision trees, ensemble methods) to identify the best fit for the dataset.  
+   - **Model Training:** Utilize historical default data to train the model, optimizing for both precision and recall.  
+   - **Validation & Testing:** Implement robust cross-validation techniques and A/B testing against current risk models.  
+   - **Budget Allocation:** Approximately AUD 120,000, inclusive of internal data science hours, potential external consultancy fees, and computational resources.
 
-3. **Deployment & Monitoring (Month 5-6):**
-   - **Integration:**  
-     Seamlessly integrate the predictive model into the bank’s existing risk management system.
-   - **Monitoring Framework:**  
-     Develop dashboards and reporting tools to monitor model performance in real-time, ensuring ongoing accuracy and reliability.
-   - **Budget Allocation:**  
-     Estimated at AUD 80,000, covering IT infrastructure, cloud computing costs, and system integration efforts.
+3. **Deployment & Monitoring (Month 5-6):**  
+   - **Integration:** Seamlessly integrate the predictive model into the bank’s existing risk management system.  
+   - **Monitoring Framework:** Develop dashboards and reporting tools to monitor model performance in real-time, ensuring ongoing accuracy and reliability.  
+   - **Budget Allocation:** Estimated at AUD 80,000, covering IT infrastructure, cloud computing costs, and system integration efforts.
 
 Budget Overview
 ---------------
 The overall estimated budget for the project is approximately AUD 250,000. This figure includes:
 
-1. **Personnel Costs (Data Scientists, Engineers, Domain Experts):**  
-   AUD 120,000
-
-2. **Technology & Infrastructure (Cloud Services, Software Licenses, IT Integration):**  
-   AUD 80,000
-
-3. **Data Acquisition & Processing:**  
-   AUD 50,000
-
-4. **Contingency Reserve (15-20%):**  
-   Included in the above estimates to account for unexpected challenges or scope adjustments.
+1. **Personnel Costs (Data Scientists, Engineers, Domain Experts):** AUD 120,000  
+2. **Technology & Infrastructure (Cloud Services, Software Licenses, IT Integration):** AUD 80,000  
+3. **Data Acquisition & Processing:** AUD 50,000  
+4. **Contingency Reserve (15-20%):** Included in the above estimates to account for unexpected challenges or scope adjustments.
 
 Expected Return on Investment (ROI)
 -----------------------------------
@@ -72,19 +49,11 @@ With a conservative reduction of 1% in default rates, the model could potentiall
 
 Risk Management and Mitigation
 ------------------------------
-Risks include data quality issues, model overfitting, and integration challenges. To mitigate these risks, the project will incorporate:
-
-1. **Robust Data Quality Checks:**  
-   Early-stage data profiling and cleansing.
-
-2. **Iterative Model Validation:**  
-   Regular checkpoints with performance metrics to ensure generalizability.
-
-3. **Pilot Deployment:**  
-   A phased rollout to monitor real-world performance before full-scale implementation.
-
-4. **Stakeholder Engagement:**  
-   Continuous communication with senior management and cross-departmental teams to ensure alignment and support.
+Risks include data quality issues, model overfitting, and integration challenges. To mitigate these risks, the project will incorporate:  
+1. **Robust Data Quality Checks:** Early-stage data profiling and cleansing.  
+2. **Iterative Model Validation:** Regular checkpoints with performance metrics to ensure generalizability.  
+3. **Pilot Deployment:** A phased rollout to monitor real-world performance before full-scale implementation.  
+4. **Stakeholder Engagement:** Continuous communication with senior management and cross-departmental teams to ensure alignment and support.
 
 Conclusion and Next Steps
 -------------------------
@@ -107,10 +76,10 @@ Below is an illustration of the dollar impact of a customer default, using the a
    - **Regulatory Requirements:**  
      Banks must maintain reserves (loan loss provisions) that reflect expected losses. With an average loss of approximately **AUD 125,000** per default, if defaults rise by even 1% across the portfolio, the bank’s provisioning needs increase significantly.
      
-     - **Example Calculation:**
-       - Total loans = AUD 500 million / AUD 250,000 ≈ **2,000 loans**
-       - At a 5% default rate, about **100 loans** default.
-       - A 1 percentage point reduction (from 5% to 4%) equates to about **20 fewer defaults**.
+     - **Example Calculation:**  
+       - Total loans = AUD 500 million / AUD 250,000 ≈ **2,000 loans**  
+       - At a 5% default rate, about **100 loans** default.  
+       - A 1 percentage point reduction (from 5% to 4%) equates to about **20 fewer defaults**.  
        - Direct saving in default losses = 20 defaults × AUD 125,000 ≈ **AUD 2.5 million** in avoided losses, which also helps reduce the required loan loss provisions.
 
 3. Operational and Recovery Costs
@@ -152,8 +121,6 @@ Given the above, for an individual default on an average loan, the total economi
 This suggests that a single default could cost the bank between **AUD 143,750 and AUD 158,750** in combined direct and indirect expenses.
 
 Extrapolating to the portfolio, a 1 percentage point improvement (i.e., 20 fewer defaults among 2,000 loans) could directly save around **AUD 2.5 million** and potentially more when considering the secondary impacts on operational and capital costs.
-
-These figures underscore the critical financial and operational consequences of customer defaults and highlight the value of predictive models to proactively reduce default rates and manage risk.
 
 APRA Obligations for Banks in Building Predictive Models
 ==========================================================
