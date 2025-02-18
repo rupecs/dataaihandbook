@@ -53,9 +53,7 @@ This proposal presents a well-structured approach to harnessing machine learning
 
 Implementing this project positions the bank at the forefront of data-driven decision-making in the lending sector, paving the way for future innovations and competitive advantage in an increasingly data-centric market.
 
-*Worked Example Cost Saving
-
-Customer Default Financial Impact in Dollar Terms
+Example Average Customer Default Financial Impact in Dollar Terms
 ===================================================
 
 Below is an illustration of the dollar impact of a customer default, using the average scenario described in the report (i.e., an average loan size of **AUD 250,000**, a portfolio of **AUD 500 million**, and an assumed recovery rate of around 50%):
