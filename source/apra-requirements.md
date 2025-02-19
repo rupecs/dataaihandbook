@@ -678,4 +678,20 @@ This release document confirms that the Predictive Default Model project has und
 
 *This document is subject to periodic review and may be updated to reflect new security controls, operational improvements, or regulatory changes.*
 
+# Risk Matrix in Banking 
 
+Below is an example of a risk matrix in tabular form, where banking systems are classified based on their **Likelihood** of risk occurrence and the **Impact** of that risk. You can adjust the specific examples to fit the exact systems in your organization.
+
+|                        | **Low Impact**<br>(e.g., informational websites, non-critical internal tools) | **Medium Impact**<br>(e.g., support systems, internal reporting tools) | **High Impact**<br>(e.g., customer data processing, payment systems, core banking systems) |
+|------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| **Low Likelihood**     | **Low Risk**<br>- Minimal consequences<br>- Rare events                     | **Moderate Risk**<br>- Manageable consequences<br>- Infrequent events  | **Elevated Risk**<br>- Some operational concerns<br>- Low frequency but higher impact   |
+| **Medium Likelihood**  | **Moderate Risk**<br>- Manageable impact<br>- Occasional issues               | **Elevated Risk**<br>- Significant but not catastrophic<br>- Moderate frequency | **High Risk**<br>- Severe operational or financial impact<br>- More frequent issues       |
+| **High Likelihood**    | **Elevated Risk**<br>- Noticeable operational impact<br>- Likely issues         | **High Risk**<br>- Critical impact on operations<br>- Likely issues      | **Critical Risk**<br>- Catastrophic outcomes<br>- Very likely events (e.g., breaches in core systems) |
+
+**How to Use This Matrix:**
+
+- **Risk Identification:** Use this matrix to map each system based on how likely a risk event is to occur and the potential impact on the bank.
+- **Prioritization:** Allocate resources and security measures accordingly. For example, systems falling in the **Critical Risk** cell should receive the highest priority for security investments and monitoring.
+- **Mitigation Strategies:** Develop tailored strategies for each risk level. Systems in the **Low Risk** category might need basic safeguards, while those in **Critical Risk** require comprehensive controls and continuous monitoring.
+
+This matrix provides a high-level overview that can be refined further based on the bank’s specific risk appetite, regulatory requirements, and operational context.
