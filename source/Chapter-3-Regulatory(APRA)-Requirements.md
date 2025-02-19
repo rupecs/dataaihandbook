@@ -4,139 +4,138 @@ Established in 1998, APRA also plays a key role in developing regulatory framewo
 
 The Australian Prudential Regulation Authority (APRA) has established comprehensive guidelines to ensure that banks and other financial institutions manage data effectively, especially when implementing machine learning (ML) and data science models.
 
-## Data classifications
 
-**Classifications of Machine Learning/Data Science Models:**
+Below is a revised version of the document with clear segregation between **Data Standards** and **Machine Learning (ML) Model Standards**. This revision incorporates additional details, aligns with APRA guidelines, and reflects industry best practices.
 
-While APRA doesn't prescribe specific classifications for ML models, it emphasizes robust model risk management. This involves categorizing models based on their potential impact and associated risks. Key considerations include:
+---
 
-- **Model Complexity and Usage:** Assessing the complexity of the model and its application in decision-making processes.
+# Data and Machine Learning Model Classifications
 
-- **Data Sensitivity:** Evaluating the sensitivity of data inputs and outputs, ensuring compliance with data privacy standards.
+This document provides a structured approach to classifying and governing both data assets and machine learning models. By separating data standards from ML model standards, banks can more effectively address the unique risks and controls associated with each area, ensuring full compliance with APRA's regulatory requirements and industry best practices.
 
-- **Operational Impact:** Understanding the potential consequences of model errors on business operations and customers.
+---
 
-These considerations align with global best practices, such as the Prudential Regulation Authority's (PRA) guidelines on model risk management, which advocate for enhanced model governance and validation frameworks. citeturn0search9
+## Part 1: Data Governance and Classification
 
-**Data Governance Requirements:**
+Effective data governance is essential to protect information assets and ensure data quality, integrity, and security throughout its lifecycle. APRA’s guidance—including Prudential Standard CPS 234 and Prudential Practice Guide CPG 235—provides a foundation for data classification and associated security controls.
 
-APRA has outlined several standards and guidelines to ensure effective data governance:
+### A. Data Classification
 
-- **Prudential Standard CPS 234 (Information Security):** Mandates that APRA-regulated entities maintain information security capabilities commensurate with the size and extent of threats to their information assets. This includes:
-
-  - **Information Asset Identification and Classification:** Identifying and classifying information assets to understand their criticality and required protection levels.
-
-  - **Implementation of Security Controls:** Establishing controls to protect information assets, ensuring only authorized access and safeguarding data integrity.
-
-  - **Incident Management:** Developing and testing response plans for information security incidents to minimize impact and restore operations swiftly.
-
-
-- **Prudential Practice Guide CPG 235 (Managing Data Risk):** Provides guidance on managing data risk, emphasizing:
-
-  - **Data Governance Framework:** Establishing a framework that defines roles, responsibilities, and processes for data management.
-
-  - **Data Quality Management:** Ensuring data is accurate, complete, and reliable for decision-making purposes.
-
-  - **Regular Monitoring and Reporting:** Continuously monitoring data quality and reporting any issues to relevant stakeholders.
-
-
-Additionally, APRA's recent initiatives, such as the 100 Critical Data Elements Pilot study, highlight the importance of:
-
-- **Identifying Critical Data Elements (CDEs):** Recognizing data elements vital to business operations and regulatory compliance.
-
-- **Implementing Consistent Data Controls:** Applying standardized controls to maintain data integrity and quality across the organization.
-
-- **Integrating Data Risk into Enterprise Risk Management:** Incorporating data risk considerations into the broader risk management framework to ensure a holistic approach.
-
-By adhering to these guidelines, banks in Australia can effectively manage the risks associated with machine learning models and ensure robust data governance, aligning with APRA's regulatory expectations. 
-
-## Controles for data
-
-In Australia, banks adhere to the Australian Prudential Regulation Authority's (APRA) Prudential Standard CPS 234, which mandates the classification of information assets based on their criticality and sensitivity. This classification guides the implementation of appropriate security controls to protect data throughout its lifecycle.
-
-**Controls for Each Data Classification:**
+Data is categorized based on its sensitivity and criticality. This classification informs the security measures required to safeguard the information. A typical classification scheme is as follows:
 
 1. **Highly Sensitive (Confidential):**
-   - **Access Controls:** Implement strict access controls ensuring only authorized personnel can access the data. This includes multi-factor authentication and role-based access permissions.
-   - **Encryption:** Utilize strong encryption protocols for data at rest and in transit to prevent unauthorized access.
-   - **Monitoring and Logging:** Continuously monitor access and usage logs to detect and respond to unauthorized activities promptly.
-   - **Regular Audits:** Conduct frequent security audits and vulnerability assessments to identify and mitigate potential risks.
+   - **Definition:** Data that, if compromised, could cause significant financial loss, reputational damage, or regulatory breaches. This often includes personally identifiable information (PII), financial data, and critical business insights.
+   - **Example:** Customer credit information, proprietary algorithms, or regulatory reports.
 
 2. **Sensitive (Restricted):**
-   - **Controlled Access:** Ensure access is limited to personnel with a legitimate need, employing role-based access controls.
-   - **Data Masking:** Apply data masking techniques where appropriate to protect sensitive information from exposure.
-   - **Incident Response Plans:** Develop and maintain incident response plans to address potential data breaches effectively.
-   - **Employee Training:** Provide regular training to staff on data protection policies and procedures.
+   - **Definition:** Data that should be limited to authorized personnel due to its potential impact on operations or privacy if exposed.
+   - **Example:** Internal operational data, non-public business strategies.
 
 3. **Internal Use (Protected):**
-   - **Access Management:** Restrict access to internal stakeholders, ensuring data is not exposed to external parties.
-   - **Secure Storage:** Store data in secure environments with appropriate safeguards against unauthorized access.
-   - **Change Management:** Implement change management processes to track and authorize modifications to data or related systems.
+   - **Definition:** Data intended for use within the organization. Exposure to external parties is controlled and minimized.
+   - **Example:** Internal policies, standard operating procedures.
 
 4. **Public:**
-   - **Integrity Checks:** Ensure data accuracy and protect against unauthorized alterations.
-   - **Controlled Distribution:** Manage the dissemination of public data to prevent misuse or misrepresentation.
-   - **Regular Reviews:** Periodically review public data to ensure it remains appropriate for public access and does not inadvertently disclose sensitive information.
+   - **Definition:** Data that is openly available and does not pose a risk if disclosed.
+   - **Example:** Press releases, published research, or general financial reports.
 
-APRA's CPS 234 emphasizes that the implementation of information security controls must be commensurate with:
+### B. Data Security Controls
 
-- **Vulnerabilities and Threats:** Assess and address both existing and emerging vulnerabilities and threats to information assets.
-- **Criticality and Sensitivity:** Apply more rigorous controls to assets classified as highly critical or sensitive.
-- **Lifecycle Stage:** Consider the stage of the information asset within its lifecycle, from creation to disposal.
-- **Potential Consequences:** Evaluate the potential impact of an information security incident on the entity and its stakeholders.
+In alignment with CPS 234, APRA-regulated institutions must implement robust controls that correspond to each data classification:
 
-By aligning security controls with these factors, banks can effectively protect their data assets and comply with APRA's regulatory requirements. 
+1. **For Highly Sensitive (Confidential) Data:**
+   - **Access Controls:** Enforce strict role-based access with multi-factor authentication (MFA) to limit access.
+   - **Encryption:** Use strong encryption protocols for both data at rest and in transit.
+   - **Monitoring & Logging:** Implement real-time monitoring, comprehensive logging, and anomaly detection to promptly identify unauthorized access.
+   - **Regular Audits:** Conduct frequent internal and external audits, vulnerability assessments, and penetration testing.
+   - **Incident Response:** Maintain a detailed, regularly tested incident response plan.
 
-In Australian banks—under APRA’s guidance—the approach to classifying both data and machine learning models is centered around understanding the potential impact of a breach or error. Here’s how it generally breaks down:
+2. **For Sensitive (Restricted) Data:**
+   - **Controlled Access:** Apply role-based access controls and limit access to personnel with a demonstrated need.
+   - **Data Masking:** Use data masking or tokenization where appropriate, especially in non-production environments.
+   - **Training:** Provide mandatory data protection and privacy training for employees.
+   - **Incident Management:** Ensure incident response protocols are in place and align with organizational risk management practices.
 
-### Data Classifications
-APRA’s framework for data classification typically includes four levels:
+3. **For Internal Use (Protected) Data:**
+   - **Access Management:** Use strong authentication measures and regular reviews of access rights.
+   - **Secure Storage:** Store data in secure environments with clearly defined access policies.
+   - **Change Management:** Implement robust change management processes for data handling systems.
 
-1. **Highly Sensitive (Confidential):**
-   - **Criticality:** This data is mission-critical and, if compromised, could severely impact the bank’s operations or its customers.
-   - **Sensitivity:** Includes data such as personal customer information, sensitive financial data, and information critical to regulatory compliance.
-   - **Controls:** Strict access restrictions, robust encryption (both at rest and in transit), continuous monitoring, and regular audits.
+4. **For Public Data:**
+   - **Data Integrity:** Ensure mechanisms are in place for verifying the accuracy and consistency of public data.
+   - **Controlled Dissemination:** Manage how data is distributed to avoid misinterpretation or inadvertent exposure of sensitive details.
+   - **Regular Review:** Periodically review public information to confirm it remains appropriate and compliant.
 
-2. **Sensitive (Restricted):**
-   - **Criticality:** Important for operations but not as impactful as highly sensitive data if compromised.
-   - **Sensitivity:** Might include internal financial reports or moderately sensitive operational data.
-   - **Controls:** Controlled access with role-based permissions, data masking where appropriate, and incident response plans.
+### C. Data Governance Framework
 
-3. **Internal Use (Protected):**
-   - **Criticality:** Primarily for internal operations. The risk is lower compared to highly sensitive or restricted data.
-   - **Sensitivity:** Data used for day-to-day internal functions.
-   - **Controls:** Secure storage and access limited to internal staff.
+To support the above classifications, banks should establish a comprehensive data governance framework that includes:
+- **Data Stewardship:** Clearly defined roles and responsibilities for data management.
+- **Quality Assurance:** Ongoing data quality controls and validation processes.
+- **Risk Integration:** Incorporation of data risks into the broader enterprise risk management strategy.
+- **Lifecycle Management:** Procedures for the creation, storage, archiving, and secure disposal of data.
 
-4. **Public:**
-   - **Criticality:** Low; designed for public dissemination.
-   - **Sensitivity:** Information that is already approved for public consumption.
-   - **Controls:** Ensuring data integrity and controlled distribution to avoid misrepresentation.
+---
 
-### Machine Learning Model Classifications
+## Part 2: Machine Learning Model Governance and Classification
 
-While APRA does not prescribe a fixed classification scheme for machine learning (ML) and data science models, banks are expected to conduct robust model risk management. The classification of these models is generally based on:
+While APRA does not prescribe a specific classification scheme for machine learning and data science models, robust model risk management is critical to ensuring that model-related risks are identified, monitored, and mitigated effectively. This section outlines best practices for classifying ML models and managing their associated risks.
+
+### A. Model Classification Criteria
+
+ML models should be classified based on their potential impact on business decisions, operational risk, and the sensitivity of data involved. Consider the following dimensions:
 
 1. **Model Complexity and Usage:**
-   - **Criticality:** Models that play a critical role in high-stakes decision-making (e.g., credit scoring, risk assessment) are deemed highly critical.
-   - **Consideration:** More complex models or those with significant financial implications are subject to stricter controls and validation.
+   - **Criticality:** Models that are integral to high-stakes decision-making (e.g., credit scoring, fraud detection, risk assessment) should be considered highly critical.
+   - **Complexity:** More complex models (e.g., deep learning models or those with numerous input variables) require more rigorous validation, documentation, and oversight.
+   - **Business Impact:** Assess whether model decisions directly influence financial outcomes or operational efficiency.
 
 2. **Data Sensitivity:**
-   - **Criticality:** Models processing highly sensitive data (as defined in the data classification) inherit a higher level of sensitivity.
-   - **Consideration:** The more sensitive the input and output data, the greater the need for enhanced security and governance measures.
+   - **Input/Output Data:** Models processing highly sensitive or confidential data inherit higher risk and must adhere to the same data security standards outlined above.
+   - **Data Quality:** Evaluate the reliability and quality of the data used to train and run the model, as poor data quality can lead to significant errors.
 
 3. **Operational Impact:**
-   - **Criticality:** Models whose failures or inaccuracies could lead to significant operational disruptions or financial losses are classified as high risk.
-   - **Consideration:** This includes assessing the potential downstream effects of model errors on business operations and customer outcomes.
+   - **Risk Exposure:** Consider the potential for model errors to disrupt operations, lead to financial loss, or impact customer outcomes.
+   - **Mitigation Strategies:** Ensure robust back-testing, monitoring, and fallback strategies are in place to address possible failures.
 
-### Integration of Both Frameworks
+### B. Model Risk Management Controls
 
-Banks use these classifications to determine the appropriate level of controls:
-- **For data:** The classification guides the security controls (e.g., encryption, access management, auditing).
-- **For ML models:** The classification influences governance practices, such as validation frameworks, ongoing monitoring, and risk management procedures.
+Based on the classification, the following controls should be applied to manage ML model risks:
 
-By aligning both data and model risk frameworks, Australian banks ensure that they protect sensitive assets and manage the risks associated with deploying machine learning models effectively.
+1. **Model Development and Validation:**
+   - **Robust Documentation:** Document model assumptions, methodologies, data sources, and limitations.
+   - **Independent Validation:** Require independent model reviews and validations, particularly for models deemed highly critical.
+   - **Stress Testing:** Implement stress testing and scenario analysis to assess model performance under extreme conditions.
 
-Let me know if you need further details or have additional questions!
+2. **Ongoing Monitoring and Performance Management:**
+   - **Regular Review:** Establish periodic reviews of model performance and recalibrate models as necessary.
+   - **Real-Time Monitoring:** Use real-time monitoring systems to detect model drift or unexpected behaviors.
+   - **Audit Trails:** Maintain detailed audit trails for model changes and decision outputs.
+
+3. **Governance and Oversight:**
+   - **Risk Committees:** Form model risk committees to oversee the governance, validation, and deployment of ML models.
+   - **Compliance Checks:** Ensure that model development and use comply with internal policies, APRA standards, and relevant regulations.
+   - **Change Management:** Apply formal change management processes for model updates, including comprehensive impact assessments.
+
+### C. Integration with Data Governance
+
+Given that ML models are intrinsically linked to the data they process, banks should integrate model risk management with their data governance framework:
+- **Data Sensitivity Mapping:** Align model classifications with the sensitivity levels of the data being used.
+- **Cross-Disciplinary Coordination:** Foster collaboration between data governance, IT security, and model risk teams to ensure consistency across controls.
+- **Enterprise Risk Management:** Incorporate both data and model risks into the overall enterprise risk management strategy to address systemic vulnerabilities.
+
+---
+
+## Summary
+
+By clearly segregating **Data Governance and Classification** from **Machine Learning Model Governance and Classification**, banks can apply tailored controls to manage distinct risk profiles effectively:
+
+- **Data Governance** focuses on protecting information assets by categorizing data (Highly Sensitive, Sensitive, Internal Use, Public) and implementing appropriate security controls and data management frameworks.
+- **ML Model Governance** emphasizes rigorous model risk management through classification based on complexity, data sensitivity, and operational impact, supported by robust validation, monitoring, and governance processes.
+
+Adopting this dual framework ensures comprehensive risk management that meets APRA’s regulatory expectations and enhances the overall security and reliability of banking operations.
+
+---
+
 
 # Worked Example 
 
