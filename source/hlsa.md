@@ -1,4 +1,4 @@
-#HLSA Structure and Contents
+# HLSA Structure and Contents
 ---
 
 ## 1. Purpose of the HLSA
