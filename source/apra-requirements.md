@@ -678,7 +678,7 @@ This release document confirms that the Predictive Default Model project has und
 
 *This document is subject to periodic review and may be updated to reflect new security controls, operational improvements, or regulatory changes.*
 
-# Risk Matrix in Banking 
+# Risk Matrix in Banking Applications
 
 Below is an example of a risk matrix in tabular form, where banking systems are classified based on their **Likelihood** of risk occurrence and the **Impact** of that risk. You can adjust the specific examples to fit the exact systems in your organization.
 
@@ -695,3 +695,47 @@ Below is an example of a risk matrix in tabular form, where banking systems are 
 - **Mitigation Strategies:** Develop tailored strategies for each risk level. Systems in the **Low Risk** category might need basic safeguards, while those in **Critical Risk** require comprehensive controls and continuous monitoring.
 
 This matrix provides a high-level overview that can be refined further based on the bank’s specific risk appetite, regulatory requirements, and operational context.
+
+When developing a new software application, you can use the risk matrix to determine its risk category by following these steps:
+
+1. **Identify the Scope and Functionality:**
+   - **Business Function:** What role does the application play in your organization? For example, is it a customer-facing app, an internal tool, or a critical payment system?
+   - **Data Sensitivity:** What types of data will the application process (e.g., public information, confidential data, personal data, financial transactions)?
+
+2. **Evaluate Impact:**
+   - **High Impact:** If the application manages sensitive customer data, performs core financial transactions, or is critical to operational continuity, it would be considered high impact.
+   - **Medium Impact:** If the application supports business functions but does not handle highly sensitive data or critical operations, it might fall into a medium impact category.
+   - **Low Impact:** Applications that provide informational content or perform non-critical functions would be categorized as low impact.
+
+3. **Assess Likelihood:**
+   - **High Likelihood:** If the application is developed with new, unproven technology, has complex integrations, or has a history of similar projects encountering issues, the chance of encountering problems is higher.
+   - **Medium Likelihood:** If the application uses a mix of established and new technology, and there are known risks that can be mitigated through testing and controls.
+   - **Low Likelihood:** If the application is built using mature, well-tested technologies with a proven track record and minimal complexity, the risk of problems occurring is lower.
+
+4. **Map to the Risk Matrix:**
+   - **Using the previous matrix**, place your new application in the appropriate cell based on the assessments of impact and likelihood.
+
+### Example Categorization
+
+Let’s say you’re developing a new customer-facing mobile banking app that handles sensitive personal and financial data. Here’s how you might evaluate it:
+
+- **Impact:** High  
+  - **Reason:** It processes sensitive financial data and directly impacts customer transactions.
+- **Likelihood:** Medium  
+  - **Reason:** Although mobile app development uses established frameworks, the app involves complex integrations (e.g., security, real-time processing) that introduce moderate risk.
+
+**Mapped in the Matrix:**
+
+|                        | **Low Impact**                   | **Medium Impact**         | **High Impact**                           |
+|------------------------|----------------------------------|---------------------------|-------------------------------------------|
+| **Low Likelihood**     | Low Risk                         | Moderate Risk             | Elevated Risk                             |
+| **Medium Likelihood**  | Moderate Risk                    | Elevated Risk             | **High Risk**<br>(Customer-Facing Mobile App) |
+| **High Likelihood**    | Elevated Risk                    | High Risk                 | Critical Risk                             |
+
+In this example, the mobile banking app falls into the **High Risk** category because of its high impact coupled with a medium likelihood of issues.
+
+5. **Action Steps:**
+   - **For a High-Risk Application:** Implement rigorous security testing, detailed code reviews, continuous monitoring, and thorough user acceptance testing. Engage in proactive risk mitigation strategies and ensure compliance with regulatory requirements.
+   - **Document & Review:** Document your risk assessment process and periodically review the risk status as the development progresses.
+
+Using this approach helps ensure that you allocate adequate resources and implement appropriate controls to manage the risks associated with your new software application.
