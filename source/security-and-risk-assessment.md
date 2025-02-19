@@ -224,3 +224,278 @@ The risk classification isn’t static—banks continuously reassess the risk le
 
 In summary, by classifying applications through a risk matrix, banks can systematically evaluate and prioritize risks, ensuring that the most critical systems receive the highest level of protection and immediate attention if any vulnerabilities or threats are detected.
 
+# Sample Risk Assessment 
+
+Below is the updated risk assessment document that now includes an **Application Classification Estimate** section. This section evaluates the overall application risk based on the architecture, data sensitivity, and security controls implemented throughout the project lifecycle.
+
+---
+
+# Comprehensive Risk Assessment Document
+
+**Project Title:**  
+Predictive Model for Retail Banking Customer Defaults
+
+**Project Scenario:**  
+A predictive model is being developed to identify retail banking customers likely to default in the next 3–6 months. This involves collecting sensitive customer data, processing it through various GCP services, training the model, and deploying it in production—all in strict compliance with APRA’s regulatory standards.
+
+---
+
+## 1. Project Overview and Data Classification
+
+### 1.1 Scenario  
+- **Objective:**  
+  Identify customers likely to default by leveraging historical and real-time data.  
+- **Components:**  
+  - Data ingestion using Cloud Storage and Cloud Pub/Sub.  
+  - Data processing and feature engineering using Cloud Dataflow and BigQuery.  
+  - Model development using Vertex AI.  
+  - Model productionization using containerization and deployment on Google Kubernetes Engine (GKE).
+
+### 1.2 Data Classification & Handling
+
+1. **Customer Data**  
+   - **Classification:** Highly Sensitive (Confidential)  
+   - **Handling:**  
+     - Encrypt data at rest using Customer-Managed Encryption Keys (CMEK) via Cloud KMS.  
+     - Encrypt data in transit using HTTPS/TLS.  
+     - Apply strict IAM policies and maintain comprehensive logging and audit trails.
+
+2. **Intermediate Data & Features**  
+   - **Classification:** Sensitive  
+   - **Handling:**  
+     - Use data masking and tokenization.  
+     - Ensure secure storage (encryption in transit and at rest).
+
+3. **Machine Learning Model**  
+   - **Classification:** Critical  
+   - **Handling:**  
+     - Subject the model to rigorous validation, version control, and continuous monitoring.  
+     - Ensure model artifacts and training logs are secured with encryption and strict access controls.
+
+---
+
+## 2. Application Classification Estimate
+
+### 2.1 Overview  
+Given the nature of the application—which handles highly sensitive customer data, processes it through multiple GCP services, and drives high-stakes decision-making—the overall application risk classification is determined by evaluating both the likelihood of potential threats and the impact of a breach or failure.
+
+### 2.2 Risk Matrix for Application Classification
+
+|                       | **Low Impact**                           | **Medium Impact**                              | **High Impact**                              |
+|-----------------------|------------------------------------------|------------------------------------------------|----------------------------------------------|
+| **Low Likelihood**    | Low Risk (Acceptable)                    | Medium Risk (Mitigate)                         | High Risk (Mitigate & Monitor)               |
+| **Medium Likelihood** | Medium Risk (Mitigate)                   | High Risk (Mitigate & Monitor)                 | Very High Risk (Immediate Action Required)   |
+| **High Likelihood**   | High Risk (Mitigate & Monitor)           | Very High Risk (Immediate Action Required)     | Critical Risk (Immediate Action Required)    |
+
+### 2.3 Application Risk Estimate  
+Based on the following considerations:
+
+- **Data Sensitivity:**  
+  The application processes highly sensitive customer data (Highly Sensitive/Confidential), which increases the impact of any data breach.
+
+- **Data Flow Complexity:**  
+  Multiple GCP services (Cloud Storage, Pub/Sub, Dataflow, BigQuery, Vertex AI, GKE) introduce additional complexity, thereby increasing the likelihood of misconfiguration or vulnerability if not properly managed.
+
+- **Regulatory Requirements:**  
+  Adherence to APRA’s Prudential Standard CPS 234 mandates rigorous security controls, which mitigates some risks but also indicates the critical nature of the application.
+
+- **Security Controls:**  
+  Comprehensive encryption (both at rest and in transit), strict IAM/RBAC, secure network configurations, continuous monitoring, and audit logging are in place to reduce overall risk.
+
+**Estimated Classification:**  
+Given the above, the overall application classification is determined as **High Risk**.  
+- **Likelihood:** Medium – Given robust security controls, the probability of a breach is mitigated but not zero.  
+- **Impact:** High – Due to the sensitivity of customer data and the potential for significant financial, operational, and reputational damage if compromised.
+
+This **High Risk** classification necessitates continuous monitoring, periodic re-assessments, and a proactive incident response plan to maintain an acceptable security posture.
+
+---
+
+## 3. Data Ingestion, Processing, and Storage with Security Controls
+
+### 3.1 Step 1: Data Ingestion
+
+#### Cloud Storage
+- **Usage:**  
+  - Raw customer data files (CSV, JSON, etc.) are uploaded to regionally hosted Cloud Storage buckets.
+- **Encryption at Rest:**  
+  - Data is encrypted using CMEK via Cloud KMS.
+- **Encryption in Transit:**  
+  - Data transfers use HTTPS/TLS.
+- **Global vs. Local Hosting:**  
+  - **Local:** Data stored in a specific region (e.g., Australia Southeast) minimizes latency and meets local residency requirements.  
+  - **Global:** Multi-region buckets provide redundancy/disaster recovery with consistent encryption.
+- **Access Controls:**  
+  - Fine-grained IAM policies restrict bucket access to authorized roles.
+
+#### Cloud Pub/Sub
+- **Usage:**  
+  - Facilitates real-time ingestion of streaming customer transaction data.
+- **Encryption:**  
+  - Data in transit is encrypted using TLS.
+- **Security:**  
+  - IAM policies control access to Pub/Sub topics and subscriptions.
+
+---
+
+### 3.2 Step 2: Data Processing and Feature Engineering
+
+#### Cloud Dataflow
+- **Usage:**  
+  - Executes ETL operations by reading data from Cloud Storage and Pub/Sub, cleansing and transforming data, and performing feature engineering.
+- **Encryption at Rest:**  
+  - Intermediate datasets are encrypted using CMEK.
+- **Encryption in Transit:**  
+  - Dataflow pipelines securely transfer data within the VPC using TLS.
+- **Additional Controls:**  
+  - **DLP API Integration:** Scans and classifies sensitive data elements to enforce masking or tokenization.  
+  - **Network Security:** Dataflow jobs run within secure VPCs with strict egress controls.
+
+#### BigQuery
+- **Usage:**  
+  - Stores processed data for analytics and model training.
+- **Encryption at Rest:**  
+  - Data is encrypted by default (option to use CMEK for enhanced control).
+- **Encryption in Transit:**  
+  - Queries and data transfers are secured with TLS.
+- **Access Controls:**  
+  - Column-level security, dataset permissions, and audit logging are employed.
+
+---
+
+### 3.3 Step 3: Data Quality and Governance
+
+#### Data Catalog & Metadata Management
+- **Usage:**  
+  - Maintains metadata and data lineage for governance and compliance.
+- **Security:**  
+  - Access is controlled via IAM, with all modifications logged for audit purposes.
+
+---
+
+## 4. Model Development and Productionization
+
+### 4.1 Step 4: Model Development with Vertex AI
+
+#### Vertex AI Notebooks and Training
+- **Usage:**  
+  - Data scientists use Vertex AI Notebooks to explore data from BigQuery, develop, and prototype the model.
+- **Training Jobs:**  
+  - Managed training jobs run in containerized environments.
+- **Encryption & Security:**  
+  - Data pulled from BigQuery is encrypted in transit (TLS).  
+  - Detailed logging and version control ensure model traceability.
+
+---
+
+### 4.2 Step 5: Model Validation and Testing
+
+#### Validation Pipelines
+- **Usage:**  
+  - Automated pipelines validate model performance (accuracy, precision, recall) and check for bias.
+- **Governance:**  
+  - Validation results, logs, and metrics are stored securely with restricted access and audit trails.
+
+---
+
+### 4.3 Step 6: Containerization and Production Deployment with GKE
+
+#### Containerization
+- **Usage:**  
+  - Package the trained model into Docker containers for consistent deployment.
+- **Security:**  
+  - Containers are scanned for vulnerabilities and adhere to secure software supply chain best practices.
+
+#### Google Kubernetes Engine (GKE)
+- **Usage:**  
+  - Deploy the containerized model for production serving.
+- **Networking & Security:**  
+  - **Cluster Security:** Deployed in private VPCs with pod security and network policies.  
+  - **Encryption at Rest:** Kubernetes secrets and persistent volumes are encrypted.  
+  - **Encryption in Transit:** Communication is secured using mTLS and HTTPS.  
+  - **Ingress & Egress:** HTTPS load balancers provide secure global access; internal communications use private IPs.
+- **Access Controls:**  
+  - RBAC policies and IAM roles enforce the principle of least privilege.
+- **Monitoring:**  
+  - Cloud Monitoring & Logging track performance and logs, with automated alerts for anomalies.
+
+---
+
+## 5. Identified Risks, Controls, and Mitigation Strategies
+
+| **Risk ID** | **Risk Description** | **Affected Component** | **Likelihood** | **Impact** | **Controls/Mitigation** |
+|-------------|----------------------|------------------------|----------------|------------|-------------------------|
+| **R1**      | Unauthorized access to raw customer data | Cloud Storage | Medium | High (Highly Sensitive data compromise) | - Enforce fine-grained IAM policies.<br> - Encrypt data at rest (CMEK) and in transit (HTTPS/TLS).<br> - Regular audits and logging. |
+| **R2**      | Data tampering during transit | Cloud Storage & Pub/Sub | Low | High | - Use HTTPS/TLS for all transfers.<br> - Implement integrity checks (hashing). |
+| **R3**      | Unauthorized access/manipulation of streaming data | Cloud Pub/Sub | Medium | Medium | - Strict IAM policies for Pub/Sub topics/subscriptions.<br> - TLS encryption.<br> - Monitor logs for anomalies. |
+| **R4**      | Leakage of sensitive data during ETL | Cloud Dataflow | Medium | High | - Execute Dataflow jobs in secure VPCs with strict egress controls.<br> - Encrypt intermediate data using CMEK.<br> - Use DLP API for masking/tokenization. |
+| **R5**      | Inadequate data governance and lineage tracking | Data Catalog | Low | Medium | - Enforce IAM controls on Data Catalog.<br> - Log all metadata modifications.<br> - Regular reviews of data lineage. |
+| **R6**      | Exposure of sensitive data during model training | Vertex AI | Low | High | - Secure data transfers (TLS) from BigQuery to Vertex AI.<br> - Enforce RBAC and IAM.<br> - Monitor training environments and restrict data exports. |
+| **R7**      | Model poisoning or adversarial attacks | Vertex AI & Training Pipelines | Medium | Critical | - Implement robust model validation and performance testing.<br> - Monitor training data quality and detect anomalies.<br> - Regular updates and patching. |
+| **R8**      | Vulnerabilities in container images | Docker Containers | Medium | High | - Perform vulnerability scans on Docker images before deployment.<br> - Follow secure containerization practices. |
+| **R9**      | Insecure communication within/outside GKE clusters | GKE Deployment | Medium | High | - Enforce mTLS and HTTPS.<br> - Deploy GKE in private VPCs with pod/network policies.<br> - Regularly update and patch clusters. |
+| **R10**     | Delayed detection of security incidents | Monitoring & Logging (Cloud Monitoring, Audit Logs) | High | High | - Deploy continuous monitoring with Cloud Monitoring and Logging.<br> - Set up automated alerts for anomalies.<br> - Regular testing of the incident response plan. |
+
+---
+
+## 6. Industry Best Practices & Regulatory Alignment
+
+- **Encryption & Key Management:**  
+  - Use CMEK via Cloud KMS for Cloud Storage, BigQuery, and Kubernetes persistent volumes.  
+  - Ensure all data transfers use TLS/HTTPS; enforce mTLS within GKE.
+
+- **Access Management:**  
+  - Apply strict IAM and RBAC policies across all GCP services, adhering to the principle of least privilege.
+
+- **Data Minimization & Governance:**  
+  - Only process and store data essential for the predictive model.  
+  - Use Data Catalog for complete metadata management.
+
+- **Audit & Monitoring:**  
+  - Leverage Cloud Audit Logs, Cloud Monitoring, and Cloud Logging to track data access and movement in compliance with APRA’s CPS 234.
+
+- **Regulatory Compliance:**  
+  - Ensure that all operations comply with APRA’s Prudential Standard CPS 234 and relevant local data residency/privacy requirements.  
+  - Regular reviews and updated incident response plans are mandatory.
+
+---
+
+## 7. Conclusion and Recommendations
+
+### 7.1 Summary  
+This risk assessment incorporates the concrete architectural and operational details of the project—from data ingestion to processing, model development, and production deployment—while ensuring strict adherence to APRA’s data classification and security standards. The overall application is classified as **High Risk** based on the sensitivity of customer data and the potential impact of any breach.
+
+### 7.2 Recommendations & Action Items  
+- **Enforce and Audit Access Controls:**  
+  Regularly review IAM and RBAC policies on Cloud Storage, Pub/Sub, BigQuery, Vertex AI, and GKE.
+- **Regular Vulnerability & Penetration Testing:**  
+  Schedule periodic scans and tests across all components.
+- **Enhance Incident Response:**  
+  Update and test incident response plans regularly for rapid detection and mitigation.
+- **Continuous Monitoring:**  
+  Ensure that Cloud Monitoring, Logging, and Audit Logs are active 24/7 and integrated with alerting systems.
+- **Ongoing Compliance Reviews:**  
+  Periodically verify that security measures meet APRA’s standards and address any new regulatory requirements.
+
+---
+
+## 8. Appendices
+
+### Appendix A: Detailed Risk Matrix  
+*(Refer to Section 2.2 and Section 5 for details.)*
+
+### Appendix B: Control Checklist  
+- **Data Ingestion:** CMEK, HTTPS/TLS, IAM policies  
+- **Data Processing:** Secure VPCs, DLP API, encryption for Dataflow and BigQuery  
+- **Model Development:** TLS for Vertex AI, detailed logging, version control  
+- **Production Deployment:** Secure Docker practices, GKE with mTLS/HTTPS, private VPC, RBAC/IAM  
+- **Monitoring:** Cloud Monitoring, Logging, Audit Logs, automated alerts  
+
+### Appendix C: Regulatory and Best Practice References  
+- APRA Prudential Standard CPS 234  
+- GCP Security Best Practices  
+- Industry standards for encryption, access management, and data governance
+
+---
+
+This document, including the **Application Classification Estimate**, should be reviewed periodically and updated to reflect any changes in technology, threat landscape, or regulatory requirements, ensuring continuous alignment with APRA’s security standards and best practices.
