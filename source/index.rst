@@ -23,6 +23,7 @@ a GitHub Pages documentation.
    :caption: Getting Started
 
    install
+   project_in_cost_perspective
 
 .. toctree::
    :maxdepth: 2
