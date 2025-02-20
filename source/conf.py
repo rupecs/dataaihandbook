@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx-with-Github-Pages'
-copyright = '2021, Hao Mai'
-author = 'Hao Mai'
+project = 'Data & AI Handbook'
+copyright = '2025 CR & DG'
+author = 'CR and DG'
 
 
 # -- General configuration ---------------------------------------------------
