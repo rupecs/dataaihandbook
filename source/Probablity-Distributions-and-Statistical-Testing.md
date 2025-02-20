@@ -68,4 +68,3 @@ Thus, for a fair coin, the probability of getting heads or tails in a single Ber
 - **Computer Science:** Randomized algorithms in decision-making processes.
 
 This example illustrates the simplicity and utility of Bernoulli trials in modeling single-step experiments with binary outcomes.
-
