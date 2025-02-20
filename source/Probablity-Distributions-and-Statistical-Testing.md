@@ -6,57 +6,57 @@ Probability distributions describe how random variables behave and play a fundam
 
 ### Introduction
 
-A Bernoulli trial is a fundamental concept in probability theory that represents a single experiment or event with only two possible outcomes: success (1) or failure (0). The probability of success is denoted by \( p \), while the probability of failure is \( 1 - p \). Bernoulli trials are the building blocks of more complex probability distributions, including the binomial and geometric distributions.
+A Bernoulli trial is a fundamental concept in probability theory that represents a single experiment or event with only two possible outcomes: success (1) or failure (0). The probability of success is denoted by $ p $, while the probability of failure is $ 1 - p $. Bernoulli trials are the building blocks of more complex probability distributions, including the binomial and geometric distributions.
 
 ### Mathematical Definition
 
-A random variable \(X\) follows a Bernoulli distribution if it takes the values:
+A random variable $X$ follows a Bernoulli distribution if it takes the values:
 
-\[
+$$
  P(X = 1) = p, \quad P(X = 0) = 1 - p
-\]
+$$
 
 where:
-- \( p \) is the probability of success (\( 0 \leq p \leq 1 \)),
-- \( 1 - p \) is the probability of failure.
+- $ p $ is the probability of success ($ 0 \leq p \leq 1 $),
+- $ 1 - p $ is the probability of failure.
 
 The probability mass function (PMF) of a Bernoulli trial is given by:
 
-\[
+$$
  P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0,1\}
-\]
+$$
 
 ### Properties of the Bernoulli Distribution
 
-- **Mean:** \( E[X] = p \)
-- **Variance:** \( \text{Var}(X) = p(1 - p) \)
-- **Mode:** \( 1 \) if \( p > 0.5 \), else \( 0 \)
-- **Skewness:** \( \frac{1 - 2p}{\sqrt{p(1 - p)}} \)
-- **Kurtosis:** \( \frac{6p^2 - 6p + 1}{p(1 - p)} \)
+- **Mean:** $ E[X] = p $
+- **Variance:** $ \text{Var}(X) = p(1 - p) $
+- **Mode:** $ 1 $ if $ p > 0.5 $, else $ 0 $
+- **Skewness:** $ \frac{1 - 2p}{\sqrt{p(1 - p)}} $
+- **Kurtosis:** $ \frac{6p^2 - 6p + 1}{p(1 - p)} $
 
 ### Relation to Other Distributions
 
-- **Binomial Distribution:** The sum of \( n \) independent Bernoulli trials forms a binomial distribution.
+- **Binomial Distribution:** The sum of $ n $ independent Bernoulli trials forms a binomial distribution.
 - **Geometric Distribution:** The number of Bernoulli trials needed to get the first success follows a geometric distribution.
-- **Poisson Approximation:** For small \( p \) and large \( n \), the sum of Bernoulli trials approximates a Poisson distribution.
+- **Poisson Approximation:** For small $ p $ and large $ n $, the sum of Bernoulli trials approximates a Poisson distribution.
 
 ### Worked Example
 
-**Problem:** Suppose a fair coin (\( p = 0.5 \)) is flipped once. What is the probability of getting heads?
+**Problem:** Suppose a fair coin ($ p = 0.5 $) is flipped once. What is the probability of getting heads?
 
 **Solution:**
 
-Here, \( X \) follows a Bernoulli distribution with \( p = 0.5 \). The probability of getting heads (success) is:
+Here, $ X $ follows a Bernoulli distribution with $ p = 0.5 $. The probability of getting heads (success) is:
 
-\[
+$$
  P(X = 1) = 0.5
-\]
+$$
 
 Similarly, the probability of getting tails (failure) is:
 
-\[
+$$
  P(X = 0) = 1 - 0.5 = 0.5
-\]
+$$
 
 Thus, for a fair coin, the probability of getting heads or tails in a single Bernoulli trial is **50%**.
 
