@@ -15,6 +15,9 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 import sphinx_press_theme  # Add this line
+extensions = [
+    'sphinx.ext.mathjax',  # This enables MathJax for rendering equations
+]
 
 html_theme = "press"
 # html_theme_path = [sphinx_press_theme.get_html_theme_path()]
