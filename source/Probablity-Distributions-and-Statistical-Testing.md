@@ -2,7 +2,7 @@
 
 Probability distributions describe how random variables behave and play a fundamental role in statistics, probability theory, and real-world data modeling. This book provides a detailed exploration of the most important probability distributions, their derivations, and their physical interpretations. We will also discuss how some distributions extend or generalize from others, creating a rich hierarchy of probability models.
 
-**Bernoulli Trials**
+## Bernoulli Trials
 
 ### Introduction
 
@@ -29,7 +29,7 @@ The probability mass function (PMF) of a Bernoulli trial is given by:
 ### Properties of the Bernoulli Distribution
 
 - **Mean:** \( E[X] = p \)
-- **Variance:** \( Var(X) = p(1 - p) \)
+- **Variance:** \( \text{Var}(X) = p(1 - p) \)
 - **Mode:** \( 1 \) if \( p > 0.5 \), else \( 0 \)
 - **Skewness:** \( \frac{1 - 2p}{\sqrt{p(1 - p)}} \)
 - **Kurtosis:** \( \frac{6p^2 - 6p + 1}{p(1 - p)} \)
