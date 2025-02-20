@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Statistical Inference</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Sphinx–Python Docstring Package" href="sphnix.html" />
+  <link rel="prev" title="Understanding Probability Distributions" href="understanding_probability_distributions.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Sphinx-with-Github-Pages</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-data-ai-handbook"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-data-ai-handbook"
+         class="nav-link  router-link-active">
+         Fundamental Concepts
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-data-ai-handbook"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-data-ai-handbook"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-data-ai-handbook"
+         class="nav-link  router-link-active">
+         Fundamental Concepts
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-data-ai-handbook"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-data-ai-handbook">Quick Links</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="links.html" class="reference internal ">GitHub Repositories</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-data-ai-handbook">Fundamental Concepts</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="project_in_cost_perspective.html" class="reference internal ">Project Proposal Report: Predicting Customer Default in the Australian Banking Sector</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="understanding_probability_distributions.html" class="reference internal ">Understanding Probability Distributions</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Statistical Inference</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#test-statistic" class="reference internal">Test Statistic</a></li>
+                
+                  <li class="toctree-l2"><a href="#types-of-inference-methods" class="reference internal">Types of Inference Methods</a></li>
+                
+                  <li class="toctree-l2"><a href="#normal-distribution" class="reference internal">Normal Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#students-t-distribution" class="reference internal">Student’s t-Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#chi-square-distribution" class="reference internal">Chi-Square Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#f-distribution" class="reference internal">F-Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#binomial-distribution" class="reference internal">Binomial Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#poisson-distribution" class="reference internal">Poisson Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#exponential-distribution" class="reference internal">Exponential Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#id1" class="reference internal">Normal Distribution</a></li>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">Test Statistic</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">Hypothesis Testing</a></li>
+                
+                  <li class="toctree-l2"><a href="#worked-example" class="reference internal">Worked Example</a></li>
+                
+                  <li class="toctree-l2"><a href="#applications-of-hypothesis-testing" class="reference internal">Applications of Hypothesis Testing</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-data-ai-handbook">Modules</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="sphnix.html" class="reference internal ">Sphinx–Python Docstring Package</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Statistical Inference</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="understanding_probability_distributions.html"
+       title="previous chapter">← Understanding Probability Distributions</a>
+  </li>
+  <li class="next">
+    <a href="sphnix.html"
+       title="next chapter">Sphinx–Python Docstring Package →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="statistical-inference">
+<h1>Statistical Inference<a class="headerlink" href="#statistical-inference" title="Link to this heading">¶</a></h1>
+<p>Statistical inference is the process of drawing conclusions about a population based on a sample of data. It involves estimating population parameters, testing hypotheses, and making predictions while accounting for uncertainty. The foundation of statistical inference is probability theory, which provides the framework for assessing the reliability and variability of estimates.</p>
+<p>There are two main types of statistical inference:</p>
+<ul class="simple">
+<li><p><strong>Estimation:</strong> Determining an unknown population parameter based on sample data. This includes point estimation (providing a single best guess) and interval estimation (providing a range of plausible values, such as confidence intervals).</p></li>
+<li><p><strong>Hypothesis Testing:</strong> Making decisions about population parameters based on sample data by assessing the strength of evidence against a null hypothesis.</p></li>
+</ul>
+<p>Statistical inference allows researchers to make probabilistic statements about populations and quantify uncertainty in decision-making.</p>
+<section id="test-statistic">
+<h2>Test Statistic<a class="headerlink" href="#test-statistic" title="Link to this heading">¶</a></h2>
+<p>A test statistic is a numerical value calculated from sample data that is used to decide whether to reject a null hypothesis in a hypothesis test. The test statistic is compared to a critical value or used to compute a p-value, which helps determine the significance of the result.</p>
+<p>Mathematically, a test statistic is often expressed as:</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{\text{Sample Statistic} - \text{Null Hypothesis Value}}{\text{Standard Error}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><strong>Sample Statistic:</strong> A measure obtained from the sample (e.g., sample mean, sample proportion).</p></li>
+<li><p><strong>Null Hypothesis Value:</strong> The hypothesized value of the parameter under the null hypothesis.</p></li>
+<li><p><strong>Standard Error:</strong> A measure of the variability of the sample statistic.</p></li>
+</ul>
+<p>Different tests use different test statistics. Some common examples include:</p>
+<ul class="simple">
+<li><p><strong>Z-statistic:</strong> Used when the population standard deviation is known and the sample size is large.</p></li>
+<li><p><strong>t-statistic:</strong> Used when the population standard deviation is unknown and the sample size is small (Student’s t-distribution is applied).</p></li>
+<li><p><strong>Chi-square statistic:</strong> Used in tests for variance and categorical data analysis.</p></li>
+<li><p><strong>F-statistic:</strong> Used in ANOVA to compare variances across multiple groups.</p></li>
+</ul>
+</section>
+<section id="types-of-inference-methods">
+<h2>Types of Inference Methods<a class="headerlink" href="#types-of-inference-methods" title="Link to this heading">¶</a></h2>
+<section id="confidence-intervals">
+<h3>Confidence Intervals<a class="headerlink" href="#confidence-intervals" title="Link to this heading">¶</a></h3>
+<p>A confidence interval provides a range of values within which a population parameter is likely to fall. It is computed using sample statistics and a margin of error based on the desired confidence level.</p>
+<p>The general form of a confidence interval is:</p>
+<div class="math notranslate nohighlight">
+\[\text{Estimate} \pm \text{Margin of Error}\]</div>
+</section>
+<section id="hypothesis-testing">
+<h3>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Link to this heading">¶</a></h3>
+<p>Hypothesis testing is a procedure to assess whether there is enough statistical evidence to support a specific claim about a population parameter. The process includes:</p>
+<ol class="arabic simple">
+<li><p>Formulating the null hypothesis (<span class="math notranslate nohighlight">\(H_0\)</span>) and the alternative hypothesis (<span class="math notranslate nohighlight">\(H_a\)</span>).</p></li>
+<li><p>Choosing an appropriate test statistic.</p></li>
+<li><p>Determining the significance level (<span class="math notranslate nohighlight">\(\alpha\)</span>), commonly set at 0.05.</p></li>
+<li><p>Computing the test statistic from sample data.</p></li>
+<li><p>Comparing the test statistic to the critical value or computing the p-value.</p></li>
+<li><p>Making a decision: Reject or fail to reject <span class="math notranslate nohighlight">\(H_0\)</span>.</p></li>
+</ol>
+</section>
+<section id="properties-of-good-estimators">
+<h3>Properties of Good Estimators<a class="headerlink" href="#properties-of-good-estimators" title="Link to this heading">¶</a></h3>
+<p>A good estimator should satisfy the following properties:</p>
+<ul class="simple">
+<li><p><strong>Unbiasedness:</strong> The expected value of the estimator equals the true parameter value.</p></li>
+<li><p><strong>Consistency:</strong> As the sample size increases, the estimator converges to the true parameter value.</p></li>
+<li><p><strong>Efficiency:</strong> The estimator has the smallest variance among all unbiased estimators.</p></li>
+<li><p><strong>Sufficiency:</strong> The estimator captures all the information in the sample about the parameter.</p></li>
+</ul>
+</section>
+<section id="distributions-in-statistical-inference">
+<h3>Distributions in Statistical Inference<a class="headerlink" href="#distributions-in-statistical-inference" title="Link to this heading">¶</a></h3>
+<p>Statistical inference relies on various probability distributions to model data and derive test statistics for hypothesis testing and estimation. Below is a summary of the most commonly used distributions and their associated test statistics.</p>
+</section>
+</section>
+<section id="normal-distribution">
+<h2>Normal Distribution<a class="headerlink" href="#normal-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}\]</div>
+<div class="math notranslate nohighlight">
+\[Z = \frac{X - \mu}{\sigma / \sqrt{n}}\]</div>
+</section>
+<section id="students-t-distribution">
+<h2>Student’s t-Distribution<a class="headerlink" href="#students-t-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\sqrt{\nu\pi} \Gamma\left(\frac{\nu}{2}\right)} \left(1 + \frac{x^2}{\nu}\right)^{-\frac{\nu+1}{2}}\]</div>
+<div class="math notranslate nohighlight">
+\[t = \frac{X - \mu}{s / \sqrt{n}}\]</div>
+</section>
+<section id="chi-square-distribution">
+<h2>Chi-Square Distribution<a class="headerlink" href="#chi-square-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \sum \frac{(O - E)^2}{E}\]</div>
+</section>
+<section id="f-distribution">
+<h2>F-Distribution<a class="headerlink" href="#f-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[F = \frac{S_1^2}{S_2^2}\]</div>
+</section>
+<section id="binomial-distribution">
+<h2>Binomial Distribution<a class="headerlink" href="#binomial-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}\]</div>
+<div class="math notranslate nohighlight">
+\[Z = \frac{X - np}{\sqrt{np(1-p)}}\]</div>
+</section>
+<section id="poisson-distribution">
+<h2>Poisson Distribution<a class="headerlink" href="#poisson-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}\]</div>
+</section>
+<section id="exponential-distribution">
+<h2>Exponential Distribution<a class="headerlink" href="#exponential-distribution" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[f(x) = \lambda e^{-\lambda x}, \quad x &gt; 0\]</div>
+<section id="probability-distributions-and-their-applications">
+<h3>Probability Distributions and Their Applications<a class="headerlink" href="#probability-distributions-and-their-applications" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="id1">
+<h2>Normal Distribution<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p><strong>Probability Density Function (PDF):</strong></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}\]</div>
+</li>
+<li><p><strong>Standard Normal Transformation:</strong></p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{X - \mu}{\sigma / \sqrt{n}}\]</div>
+</li>
+<li><p><strong>Properties:</strong></p>
+<ul class="simple">
+<li><p>Symmetric about <span class="math notranslate nohighlight">\(\mu\)</span>.</p></li>
+<li><p>Mean: <span class="math notranslate nohighlight">\(\mu\)</span>, Variance: <span class="math notranslate nohighlight">\(\sigma^2\)</span>.</p></li>
+<li><p>The empirical rule states that 68%, 95%, and 99.7% of data falls within 1, 2, and 3 standard deviations, respectively.</p></li>
+</ul>
+</li>
+</ul>
+<section id="statistical-inference-revisited">
+<h3>Statistical Inference (Revisited)<a class="headerlink" href="#statistical-inference-revisited" title="Link to this heading">¶</a></h3>
+<p>### Introduction</p>
+<p>Statistical inference is the process of drawing conclusions about a population based on a sample of data. It involves estimating population parameters, testing hypotheses, and making predictions while accounting for uncertainty. The foundation of statistical inference is probability theory, which provides the framework for assessing the reliability and variability of estimates.</p>
+<p>There are two main types of statistical inference:</p>
+<ul class="simple">
+<li><p><strong>Estimation:</strong> Determining an unknown population parameter based on sample data. This includes point estimation (providing a single best guess) and interval estimation (providing a range of plausible values, such as confidence intervals).</p></li>
+<li><p><strong>Hypothesis Testing:</strong> Making decisions about population parameters based on sample data by assessing the strength of evidence against a null hypothesis.</p></li>
+</ul>
+<p>Statistical inference allows researchers to make probabilistic statements about populations and quantify uncertainty in decision-making.</p>
+</section>
+</section>
+<section id="id2">
+<h2>Test Statistic<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>A test statistic is a numerical value calculated from sample data that is used to decide whether to reject a null hypothesis in a hypothesis test. The test statistic is compared to a critical value or used to compute a p-value, which helps determine the significance of the result.</p>
+<p>Mathematically, a test statistic is often expressed as:</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{\text{Sample Statistic} - \text{Null Hypothesis Value}}{\text{Standard Error}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><strong>Sample Statistic:</strong> A measure obtained from the sample (e.g., sample mean, sample proportion).</p></li>
+<li><p><strong>Null Hypothesis Value:</strong> The hypothesized value of the parameter under the null hypothesis.</p></li>
+<li><p><strong>Standard Error:</strong> A measure of the variability of the sample statistic.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Hypothesis Testing<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Null Hypothesis (:math:`H_0`):</strong> A statement that there is no effect or no difference. It is assumed true until evidence suggests otherwise.</p></li>
+<li><p><strong>Alternative Hypothesis (:math:`H_a`):</strong> A statement that contradicts the null hypothesis, indicating the presence of an effect or difference.</p></li>
+<li><p><strong>Significance Level (:math:`alpha`):</strong> The probability of rejecting the null hypothesis when it is actually true (Type I error).</p></li>
+<li><p><strong>p-value:</strong> The probability of obtaining a test statistic as extreme as the observed one, assuming <span class="math notranslate nohighlight">\(H_0\)</span> is true.</p></li>
+</ul>
+</section>
+<section id="worked-example">
+<h2>Worked Example<a class="headerlink" href="#worked-example" title="Link to this heading">¶</a></h2>
+<p><strong>Problem:</strong> A company claims that the average battery life of its smartphones is 20 hours. A sample of 30 smartphones has a mean battery life of 19.5 hours with a standard deviation of 1.5 hours. Test whether the claim is true at a 5% significance level.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li><p><strong>Step 1: Define Hypotheses</strong></p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu = 20, \quad H_a: \mu \neq 20\]</div>
+</li>
+<li><p><strong>Step 2: Compute the Test Statistic</strong></p>
+<div class="math notranslate nohighlight">
+\[t = \frac{19.5 - 20}{1.5 / \sqrt{30}} = \frac{-0.5}{0.273} \approx -1.83\]</div>
+</li>
+<li><p><strong>Step 3: Determine the Critical Value</strong></p>
+<p>From the t-table with <span class="math notranslate nohighlight">\(df = 29\)</span> at <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>, the critical value for a two-tailed test is <span class="math notranslate nohighlight">\(\pm 2.045\)</span>.</p>
+</li>
+<li><p><strong>Step 4: Make a Decision</strong></p>
+<p>Since <span class="math notranslate nohighlight">\(-1.83\)</span> falls within the acceptance region (<span class="math notranslate nohighlight">\(-2.045, 2.045\)</span>), we fail to reject <span class="math notranslate nohighlight">\(H_0\)</span>. There is no significant evidence to claim that the average battery life differs from 20 hours.</p>
+</li>
+</ul>
+</section>
+<section id="applications-of-hypothesis-testing">
+<h2>Applications of Hypothesis Testing<a class="headerlink" href="#applications-of-hypothesis-testing" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Medical Research:</strong> Testing the effectiveness of new drugs.</p></li>
+<li><p><strong>Manufacturing:</strong> Checking if a machine produces items within tolerance limits.</p></li>
+<li><p><strong>Finance:</strong> Assessing if a new investment strategy yields higher returns.</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="understanding_probability_distributions.html"
+       title="previous chapter">← Understanding Probability Distributions</a>
+  </li>
+  <li class="next">
+    <a href="sphnix.html"
+       title="next chapter">Sphinx–Python Docstring Package →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, Hao Mai.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

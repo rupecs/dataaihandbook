@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>=============================== Understanding Probability Distributions: A Comprehensive Guide</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Sphinx-with-Github-Pages</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Getting Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Getting Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Quick Links</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="links.html" class="reference internal ">GitHub Repositories</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Getting Started</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="install.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Modules</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="sphnix.html" class="reference internal ">Sphinx–Python Docstring Package</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>===============================
+Understanding Probability Distributions: A Comprehensive Guide</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <p>.. _Understanding_Probability_Distributions:</p>
+<section id="understanding-probability-distributions-a-comprehensive-guide">
+<h1>===============================
+Understanding Probability Distributions: A Comprehensive Guide<a class="headerlink" href="#understanding-probability-distributions-a-comprehensive-guide" title="Link to this heading">¶</a></h1>
+<p>.. contents:: Table of Contents
+:depth: 2</p>
+</section>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>Probability distributions describe how random variables behave and play a fundamental role in statistics, probability theory, and real-world data modeling. This document provides a detailed exploration of the most important probability distributions, their derivations, and their physical interpretations. We will also discuss how some distributions extend or generalize from others, creating a rich hierarchy of probability models.</p>
+</section>
+<section id="bernoulli-trials">
+<h1>Bernoulli Trials<a class="headerlink" href="#bernoulli-trials" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>Introduction<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>A Bernoulli trial is a fundamental concept in probability theory that represents a single experiment or event with only two possible outcomes: success (1) or failure (0). The probability of success is denoted by :math:<code class="docutils literal notranslate"><span class="pre">p</span></code>, while the probability of failure is :math:<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">p</span></code>. Bernoulli trials are the building blocks of more complex probability distributions, including the binomial and geometric distributions.</p>
+</section>
+<section id="mathematical-definition">
+<h2>Mathematical Definition<a class="headerlink" href="#mathematical-definition" title="Link to this heading">¶</a></h2>
+<p>A random variable :math:<code class="docutils literal notranslate"><span class="pre">X</span></code> follows a Bernoulli distribution if it takes the values:</p>
+<p>.. math::</p>
+<p>P(X = 1) = p, \quad P(X = 0) = 1 - p</p>
+<p>where:</p>
+<ul class="simple">
+<li><p>:math:<code class="docutils literal notranslate"><span class="pre">p</span></code> is the probability of success (:math:<code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">\leq</span> <span class="pre">p</span> <span class="pre">\leq</span> <span class="pre">1</span></code>),</p></li>
+<li><p>:math:<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">p</span></code> is the probability of failure.</p></li>
+</ul>
+<p>The probability mass function (PMF) of a Bernoulli trial is given by:</p>
+<p>.. math::</p>
+<p>P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in {0,1}</p>
+</section>
+<section id="properties-of-the-bernoulli-distribution">
+<h2>Properties of the Bernoulli Distribution<a class="headerlink" href="#properties-of-the-bernoulli-distribution" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Mean:</strong> :math:<code class="docutils literal notranslate"><span class="pre">E[X]</span> <span class="pre">=</span> <span class="pre">p</span></code></p></li>
+<li><p><strong>Variance:</strong> :math:<code class="docutils literal notranslate"><span class="pre">\text{Var}(X)</span> <span class="pre">=</span> <span class="pre">p(1</span> <span class="pre">-</span> <span class="pre">p)</span></code></p></li>
+<li><p><strong>Mode:</strong> :math:<code class="docutils literal notranslate"><span class="pre">1</span></code> if :math:<code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&gt;</span> <span class="pre">0.5</span></code>, else :math:<code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><strong>Skewness:</strong> :math:<code class="docutils literal notranslate"><span class="pre">\frac{1</span> <span class="pre">-</span> <span class="pre">2p}{\sqrt{p(1</span> <span class="pre">-</span> <span class="pre">p)}}</span></code></p></li>
+<li><p><strong>Kurtosis:</strong> :math:<code class="docutils literal notranslate"><span class="pre">\frac{6p^2</span> <span class="pre">-</span> <span class="pre">6p</span> <span class="pre">+</span> <span class="pre">1}{p(1</span> <span class="pre">-</span> <span class="pre">p)}</span></code></p></li>
+</ul>
+</section>
+<section id="relation-to-other-distributions">
+<h2>Relation to Other Distributions<a class="headerlink" href="#relation-to-other-distributions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Binomial Distribution:</strong> The sum of :math:<code class="docutils literal notranslate"><span class="pre">n</span></code> independent Bernoulli trials forms a binomial distribution.</p></li>
+<li><p><strong>Geometric Distribution:</strong> The number of Bernoulli trials needed to get the first success follows a geometric distribution.</p></li>
+<li><p><strong>Poisson Approximation:</strong> For small :math:<code class="docutils literal notranslate"><span class="pre">p</span></code> and large :math:<code class="docutils literal notranslate"><span class="pre">n</span></code>, the sum of Bernoulli trials approximates a Poisson distribution.</p></li>
+</ul>
+</section>
+<section id="worked-example">
+<h2>Worked Example<a class="headerlink" href="#worked-example" title="Link to this heading">¶</a></h2>
+<p><strong>Problem:</strong> Suppose a fair coin (:math:<code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">0.5</span></code>) is flipped once. What is the probability of getting heads?</p>
+<p><strong>Solution:</strong></p>
+<p>Here, :math:<code class="docutils literal notranslate"><span class="pre">X</span></code> follows a Bernoulli distribution with :math:<code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">0.5</span></code>. The probability of getting heads (success) is:</p>
+<p>.. math::</p>
+<p>P(X = 1) = 0.5</p>
+<p>Similarly, the probability of getting tails (failure) is:</p>
+<p>.. math::</p>
+<p>P(X = 0) = 1 - 0.5 = 0.5</p>
+<p>Thus, for a fair coin, the probability of getting heads or tails in a single Bernoulli trial is <strong>50%</strong>.</p>
+</section>
+<section id="applications-of-bernoulli-trials">
+<h2>Applications of Bernoulli Trials<a class="headerlink" href="#applications-of-bernoulli-trials" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Quality Control:</strong> Testing whether a product meets a certain standard.</p></li>
+<li><p><strong>Medical Trials:</strong> Determining whether a treatment is successful or not.</p></li>
+<li><p><strong>Finance:</strong> Modeling binary outcomes in risk assessments.</p></li>
+<li><p><strong>Computer Science:</strong> Randomized algorithms in decision-making processes.</p></li>
+</ul>
+<p>This example illustrates the simplicity and utility of Bernoulli trials in modeling single-step experiments with binary outcomes.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, Hao Mai.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

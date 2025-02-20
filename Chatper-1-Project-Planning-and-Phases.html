@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Phases of a Data-Science Project</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Sphinx-with-Github-Pages</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Getting Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Getting Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Quick Links</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="links.html" class="reference internal ">GitHub Repositories</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Getting Started</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="install.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Modules</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="sphnix.html" class="reference internal ">Sphinx–Python Docstring Package</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Phases of a Data-Science Project</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="phases-of-a-data-science-project">
+<h1>Phases of a Data-Science Project<a class="headerlink" href="#phases-of-a-data-science-project" title="Link to this heading">¶</a></h1>
+<p>Applying Agile phases to a Data Science project involves adapting the iterative and flexible nature of Agile to the unique aspects of data-driven work. Data science projects often have more uncertainty, especially during the exploratory stages, so Agile’s focus on experimentation, continuous feedback, and incremental progress fits well.</p>
+<p>Here’s how Agile phases map onto a Data Science project lifecycle:</p>
+<hr class="docutils" />
+<p><strong>1. Concept / Ideation</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Define the problem you’re solving and identify potential data-driven solutions.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Problem Definition:</strong> What business question or challenge are we addressing?</p></li>
+<li><p><strong>Stakeholder Discussions:</strong> Collaborate with business leaders, domain experts, or product owners to align on goals.</p></li>
+<li><p><strong>Initial Hypotheses:</strong> Formulate hypotheses based on intuition, prior knowledge, or existing data.</p></li>
+<li><p><strong>Feasibility Check:</strong> Is the data available? Is the problem solvable with data science techniques?</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Clear business problem statement and initial data science approach.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>2. Inception / Initiation</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Set the foundation for the project, defining scope, data sources, and team roles.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Data Audit:</strong> Identify available data sources (internal databases, APIs, third-party data).</p></li>
+<li><p><strong>Define Success Metrics:</strong> How will we know if the model or analysis is successful (e.g., accuracy, F1 score, ROI)?</p></li>
+<li><p><strong>Team Setup:</strong> Define roles (Data Scientists, Data Engineers, Analysts, Business Stakeholders).</p></li>
+<li><p><strong>Tooling Setup:</strong> Choose tools and environments (Python, R, Jupyter Notebooks, cloud platforms like AWS/GCP).</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Project roadmap, initial backlog of tasks (e.g., data collection, exploratory analysis), and success criteria.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>3. Iteration / Sprint Planning</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Break the project into manageable tasks for the upcoming sprint.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Backlog Prioritization:</strong> Choose tasks for the sprint, such as data cleaning, feature engineering, or model development.</p></li>
+<li><p><strong>Define User Stories:</strong> Example:</p>
+<ul>
+<li><p>“As a data scientist, I need to clean and preprocess the customer dataset to prepare it for modeling.”</p></li>
+<li><p>“As a business analyst, I want to visualize key trends to understand customer churn.”</p></li>
+</ul>
+</li>
+<li><p><strong>Estimation:</strong> Use story points or time estimates for tasks (considering the inherent uncertainty in data tasks).</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Sprint backlog with clear, actionable tasks.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>4. Iteration Execution / Sprint Development</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Conduct data analysis, modeling, and validation in iterative cycles.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Exploratory Data Analysis (EDA):</strong> Visualizing, summarizing, and understanding the data.</p></li>
+<li><p><strong>Data Cleaning:</strong> Handling missing values, outliers, or inconsistencies.</p></li>
+<li><p><strong>Feature Engineering:</strong> Creating meaningful features to improve model performance.</p></li>
+<li><p><strong>Model Development:</strong> Building baseline models (e.g., regression, classification) and iterating on more complex ones (e.g., random forests, deep learning).</p></li>
+<li><p><strong>Model Validation:</strong> Testing models using cross-validation, performance metrics, etc.</p></li>
+<li><p><strong>Daily Standups:</strong> Share progress, blockers (e.g., data quality issues), and next steps.</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Working prototypes of models or insights ready for review.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>5. Review &amp; Demonstration (Sprint Review)</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Share findings with stakeholders and gather feedback.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Model Presentation:</strong> Demonstrate model performance, visualizations, or key insights.</p></li>
+<li><p><strong>Interpretation:</strong> Explain model outputs in business terms (e.g., why certain features are important).</p></li>
+<li><p><strong>Stakeholder Feedback:</strong> Adjust based on feedback (e.g., refining model goals, adding more data).</p></li>
+<li><p><strong>Revisit Metrics:</strong> Ensure the results align with predefined success criteria.</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Stakeholder-aligned deliverables and feedback for the next sprint.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>6. Retrospective</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Reflect on the sprint and identify areas for improvement.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>What Worked:</strong> Did the data pipeline run smoothly? Were models accurate and interpretable?</p></li>
+<li><p><strong>Challenges:</strong> Data availability, model convergence issues, communication gaps.</p></li>
+<li><p><strong>Actionable Improvements:</strong> Automate parts of data processing, refine feature selection strategies, improve collaboration with stakeholders.</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Process improvements for future sprints.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>7. Release / Delivery</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Deploy the final model or insights into production or deliver to stakeholders.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Model Deployment:</strong> Deploy models as APIs, integrate into business systems, or embed in dashboards.</p></li>
+<li><p><strong>Reporting &amp; Visualization:</strong> Deliver results through dashboards (Tableau, Power BI) or reports.</p></li>
+<li><p><strong>Documentation:</strong> Document data sources, model assumptions, and methodologies.</p></li>
+<li><p><strong>Handoff:</strong> If needed, train end-users or teams on how to use the model/insights.</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> Production-ready models or actionable insights delivered to stakeholders.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>8. Continuous Feedback &amp; Maintenance (Ongoing)</strong></p>
+<ul class="simple">
+<li><p><strong>Purpose:</strong> Monitor the performance of deployed models and adapt to changes.</p></li>
+<li><p><strong>Activities:</strong></p>
+<ul>
+<li><p><strong>Model Monitoring:</strong> Track model performance in production (concept drift, data drift).</p></li>
+<li><p><strong>Retraining:</strong> Periodically retrain models with new data.</p></li>
+<li><p><strong>Feedback Loop:</strong> Incorporate user feedback to refine models or analyses.</p></li>
+<li><p><strong>Bug Fixes &amp; Updates:</strong> Address issues as they arise and improve model accuracy over time.</p></li>
+</ul>
+</li>
+<li><p><strong>Outcome:</strong> A robust, continuously improving data science solution.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="example-data-science-project-using-agile">
+<h2>Example Data Science Project Using Agile<a class="headerlink" href="#example-data-science-project-using-agile" title="Link to this heading">¶</a></h2>
+<p><strong>Business Problem:</strong> Predict customer churn for a subscription-based service.</p>
+<ol class="arabic simple">
+<li><p><strong>Concept/Ideation:</strong> Identify the need to reduce churn and increase customer retention.</p></li>
+<li><p><strong>Inception:</strong> Gather customer data, define churn criteria, and establish success metrics (e.g., 85% prediction accuracy).</p></li>
+<li><p><strong>Sprint Planning:</strong> Plan tasks like data cleaning, EDA, building baseline models (e.g., logistic regression).</p></li>
+<li><p><strong>Execution:</strong> Perform EDA, identify key churn factors, and develop models.</p></li>
+<li><p><strong>Review:</strong> Present findings to stakeholders, explain why certain customers are likely to churn.</p></li>
+<li><p><strong>Retrospective:</strong> Identify process bottlenecks and improve data processing for the next sprint.</p></li>
+<li><p><strong>Release:</strong> Deploy the churn model into production, enabling real-time churn predictions.</p></li>
+<li><p><strong>Maintenance:</strong> Monitor model performance over time and retrain as customer behaviors evolve.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="agile-benefits-for-data-science">
+<h2>Agile Benefits for Data Science:<a class="headerlink" href="#agile-benefits-for-data-science" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Flexibility:</strong> Adjust quickly based on new insights or data.</p></li>
+<li><p><strong>Iterative Development:</strong> Build models in incremental steps, testing and validating at each stage.</p></li>
+<li><p><strong>Continuous Feedback:</strong> Involve stakeholders regularly to ensure alignment with business goals.</p></li>
+<li><p><strong>Risk Mitigation:</strong> Early testing helps catch issues like poor data quality or unrealistic expectations.</p></li>
+</ul>
+<p>By integrating Agile into Data Science projects, teams can manage the complexity and unpredictability that often comes with working with data, while delivering value incrementally and consistently.</p>
+</section>
+</section>
+<section id="sample-project">
+<h1>Sample Project<a class="headerlink" href="#sample-project" title="Link to this heading">¶</a></h1>
+<p>Project Phases for Predicting Customer Default in the Australian Banking Sector</p>
+<p>Below is a breakdown of the project phases using the Agile Data Science template.</p>
+<hr class="docutils" />
+<section id="concept-ideation">
+<h2>1. Concept / Ideation<a class="headerlink" href="#concept-ideation" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Define the problem and outline the potential data-driven solution to predict customer default in the Australian banking sector.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Problem Definition:</strong></p>
+<ul>
+<li><p>Identify the high default rate (~5%) and significant exposure due to large average loan sizes.</p></li>
+<li><p>Establish the goal of reducing defaults by at least 1 percentage point to save approximately AUD 2.5 million annually.</p></li>
+</ul>
+</li>
+<li><p><strong>Stakeholder Discussions:</strong></p>
+<ul>
+<li><p>Engage with risk management, senior management, and IT teams to confirm strategic objectives.</p></li>
+</ul>
+</li>
+<li><p><strong>Initial Hypotheses:</strong></p>
+<ul>
+<li><p>Hypothesize that advanced machine learning techniques can accurately identify high-risk customers.</p></li>
+</ul>
+</li>
+<li><p><strong>Feasibility Check:</strong></p>
+<ul>
+<li><p>Assess the availability of internal customer data (credit history, transaction records, demographics) and the possibility of integrating external credit bureau data.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+A clear business problem statement, with defined objectives to improve risk assessment, reduce defaults, and increase profitability.</p>
+</section>
+<hr class="docutils" />
+<section id="inception-initiation">
+<h2>2. Inception / Initiation<a class="headerlink" href="#inception-initiation" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Set the foundational aspects of the project including scope, data sources, team roles, and initial planning.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Scope and Objectives:</strong></p>
+<ul>
+<li><p>Detail the project’s aim: to develop a predictive model for customer default.</p></li>
+<li><p>Define success metrics such as a reduction in default rate and associated financial savings.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Audit and Tooling Setup:</strong></p>
+<ul>
+<li><p>Identify and gather internal customer data and external credit bureau data.</p></li>
+<li><p>Allocate budget for data procurement, data cleaning tools, and specialist data engineering support.</p></li>
+</ul>
+</li>
+<li><p><strong>Team Setup:</strong></p>
+<ul>
+<li><p>Assemble a cross-functional team including Data Scientists, Data Engineers, Domain Experts, and IT personnel.</p></li>
+</ul>
+</li>
+<li><p><strong>Project Roadmap:</strong></p>
+<ul>
+<li><p>Establish the 6-month timeline divided into three primary phases:</p>
+<ul>
+<li><p><strong>Data Collection &amp; Preparation (Month 1-2)</strong></p></li>
+<li><p><strong>Model Development &amp; Validation (Month 3-4)</strong></p></li>
+<li><p><strong>Deployment &amp; Monitoring (Month 5-6)</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+A finalized project roadmap, detailed budget allocations, and clearly defined roles and responsibilities.</p>
+</section>
+<hr class="docutils" />
+<section id="iteration-sprint-planning">
+<h2>3. Iteration / Sprint Planning<a class="headerlink" href="#iteration-sprint-planning" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Break down the project into actionable sprints with clear tasks and priorities.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Sprint Backlog Creation:</strong></p>
+<ul>
+<li><p><strong>Data Collection &amp; Preparation Sprint:</strong></p>
+<ul>
+<li><p>Gather internal and external data.</p></li>
+<li><p>Execute data cleaning and integration.</p></li>
+<li><p>Set up data validation processes.</p></li>
+</ul>
+</li>
+<li><p><strong>Model Development &amp; Validation Sprint:</strong></p>
+<ul>
+<li><p>Evaluate machine learning algorithms (logistic regression, decision trees, ensemble methods).</p></li>
+<li><p>Train the model using historical default data.</p></li>
+<li><p>Implement robust validation techniques such as cross-validation and A/B testing.</p></li>
+</ul>
+</li>
+<li><p><strong>Deployment &amp; Monitoring Sprint:</strong></p>
+<ul>
+<li><p>Plan integration of the model into the existing risk management system.</p></li>
+<li><p>Design dashboards and reporting tools for real-time performance monitoring.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>User Stories:</strong></p>
+<ul>
+<li><p>“As a data engineer, I need to gather and clean customer data to ensure model accuracy.”</p></li>
+<li><p>“As a data scientist, I need to evaluate and train multiple models to select the best-performing algorithm.”</p></li>
+<li><p>“As an IT specialist, I need to integrate the model into the bank’s systems so that risk assessments are updated in real-time.”</p></li>
+</ul>
+</li>
+<li><p><strong>Estimation:</strong></p>
+<ul>
+<li><p>Define time and budget estimates for each sprint (AUD 50,000 for data preparation, AUD 120,000 for model development, and AUD 80,000 for deployment).</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+A detailed sprint plan with prioritized tasks and clear timelines.</p>
+</section>
+<hr class="docutils" />
+<section id="iteration-execution-sprint-development">
+<h2>4. Iteration Execution / Sprint Development<a class="headerlink" href="#iteration-execution-sprint-development" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Execute the planned sprints to build, test, and refine the predictive model.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Data Collection &amp; Preparation (Month 1-2):</strong></p>
+<ul>
+<li><p>Collect internal customer data and external credit bureau data.</p></li>
+<li><p>Perform data cleaning, validation, and integration to ensure high-quality input for modeling.</p></li>
+</ul>
+</li>
+<li><p><strong>Model Development &amp; Validation (Month 3-4):</strong></p>
+<ul>
+<li><p>Select the optimal machine learning algorithm through testing various models.</p></li>
+<li><p>Train the model using historical data, optimizing for precision and recall.</p></li>
+<li><p>Conduct validation and testing via cross-validation and A/B tests against current risk models.</p></li>
+</ul>
+</li>
+<li><p><strong>Daily Standups/Checkpoints:</strong></p>
+<ul>
+<li><p>Hold regular meetings to discuss progress, address challenges (e.g., data quality issues or model overfitting), and adjust priorities.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+Working prototypes of predictive models with initial performance metrics and validation results.</p>
+</section>
+<hr class="docutils" />
+<section id="review-demonstration-sprint-review">
+<h2>5. Review &amp; Demonstration (Sprint Review)<a class="headerlink" href="#review-demonstration-sprint-review" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Showcase the developed model to stakeholders and gather feedback for further refinement.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Model Presentation:</strong></p>
+<ul>
+<li><p>Demonstrate model performance metrics and risk segmentation outcomes.</p></li>
+<li><p>Present visualizations and insights derived from the predictive analytics.</p></li>
+</ul>
+</li>
+<li><p><strong>Interpretation &amp; Stakeholder Feedback:</strong></p>
+<ul>
+<li><p>Explain the model’s predictions in business terms.</p></li>
+<li><p>Collect feedback from risk managers and senior leadership regarding model efficacy and integration plans.</p></li>
+</ul>
+</li>
+<li><p><strong>Revisit Success Metrics:</strong></p>
+<ul>
+<li><p>Ensure that the model’s performance aligns with the initial business objectives and ROI expectations.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+Stakeholder-aligned deliverables with feedback incorporated into the next iteration if necessary.</p>
+</section>
+<hr class="docutils" />
+<section id="retrospective">
+<h2>6. Retrospective<a class="headerlink" href="#retrospective" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Reflect on the sprint outcomes, identify successes and challenges, and plan improvements for future cycles.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Review of Processes:</strong></p>
+<ul>
+<li><p>Evaluate the effectiveness of data collection, model development, and integration processes.</p></li>
+</ul>
+</li>
+<li><p><strong>Identify Challenges:</strong></p>
+<ul>
+<li><p>Discuss issues such as data quality, overfitting, or integration hurdles.</p></li>
+</ul>
+</li>
+<li><p><strong>Plan for Improvements:</strong></p>
+<ul>
+<li><p>Outline actionable steps to enhance data processing, modeling techniques, and cross-departmental communication in future sprints.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+A set of actionable insights and process improvements to be applied in ongoing model refinement and future projects.</p>
+</section>
+<hr class="docutils" />
+<section id="release-delivery">
+<h2>7. Release / Delivery<a class="headerlink" href="#release-delivery" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Deploy the finalized predictive model into the bank’s operational environment and ensure its adoption.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Model Deployment:</strong></p>
+<ul>
+<li><p>Integrate the predictive model seamlessly into the bank’s existing risk management system.</p></li>
+</ul>
+</li>
+<li><p><strong>Reporting &amp; Visualization:</strong></p>
+<ul>
+<li><p>Develop dashboards and reporting tools for continuous performance monitoring.</p></li>
+</ul>
+</li>
+<li><p><strong>Documentation &amp; Handoff:</strong></p>
+<ul>
+<li><p>Document the model’s methodology, data sources, assumptions, and integration steps.</p></li>
+<li><p>Train relevant teams on how to interpret and use the model outputs.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+A production-ready predictive model that is fully integrated into the bank’s systems and accessible to end-users.</p>
+</section>
+<hr class="docutils" />
+<section id="continuous-feedback-maintenance-ongoing">
+<h2>8. Continuous Feedback &amp; Maintenance (Ongoing)<a class="headerlink" href="#continuous-feedback-maintenance-ongoing" title="Link to this heading">¶</a></h2>
+<p><strong>Purpose:</strong><br />
+Ensure the model remains accurate and effective over time through regular monitoring and updates.</p>
+<p><strong>Activities:</strong></p>
+<ul class="simple">
+<li><p><strong>Model Monitoring:</strong></p>
+<ul>
+<li><p>Set up real-time dashboards to track performance metrics and detect issues like concept or data drift.</p></li>
+</ul>
+</li>
+<li><p><strong>Iterative Updates &amp; Retraining:</strong></p>
+<ul>
+<li><p>Schedule periodic retraining sessions with new data to maintain model accuracy.</p></li>
+</ul>
+</li>
+<li><p><strong>Feedback Loop:</strong></p>
+<ul>
+<li><p>Continuously gather user feedback and performance data to refine the model and adjust risk assessment strategies.</p></li>
+</ul>
+</li>
+<li><p><strong>Bug Fixes &amp; System Updates:</strong></p>
+<ul>
+<li><p>Address any integration or performance issues as they arise to ensure seamless operation.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong><br />
+A robust, continuously improving predictive model that adapts to evolving data and maintains high accuracy in risk management.</p>
+<hr class="docutils" />
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, Hao Mai.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

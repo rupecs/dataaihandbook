@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Security and Risk Assessment Overview</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Sphinx-with-Github-Pages</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Getting Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Quick Links
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Getting Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-sphinx-with-github-s-documentation"
+         class="nav-link ">
+         Modules
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Quick Links</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="links.html" class="reference internal ">GitHub Repositories</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Getting Started</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="install.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-with-github-s-documentation">Modules</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="sphnix.html" class="reference internal ">Sphinx–Python Docstring Package</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Security and Risk Assessment Overview</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="security-and-risk-assessment-overview">
+<h1>Security and Risk Assessment Overview<a class="headerlink" href="#security-and-risk-assessment-overview" title="Link to this heading">¶</a></h1>
+<p>In a financial institution like a bank, deploying a machine learning (ML) application into production requires a rigorous security assessment to ensure the system complies with regulatory requirements and maintains the integrity, confidentiality, and availability of sensitive financial data. Below is a comprehensive explanation of what such a security assessment entails:</p>
+<hr class="docutils" />
+<section id="regulatory-compliance-and-governance">
+<h2>1. <strong>Regulatory Compliance and Governance</strong><a class="headerlink" href="#regulatory-compliance-and-governance" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Identification of Applicable Regulations:</strong><br />
+Financial institutions must adhere to strict regulations (e.g., GDPR, PCI DSS, SOX, FFIEC guidelines) that govern data privacy, security, and operational risk. The assessment starts by identifying and mapping relevant legal and regulatory requirements to the ML application.</p></li>
+<li><p><strong>Data Protection and Privacy:</strong><br />
+The security assessment ensures that all data handling practices (data collection, storage, processing, and transmission) comply with privacy regulations. This includes data anonymization, encryption (both at rest and in transit), and secure data retention policies.</p></li>
+<li><p><strong>Audit and Reporting Requirements:</strong><br />
+The system must support detailed logging and auditing to enable regulatory reporting and forensic analysis. Audit trails should cover data access, model training, and prediction processes.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="threat-modeling-and-risk-assessment">
+<h2>2. <strong>Threat Modeling and Risk Assessment</strong><a class="headerlink" href="#threat-modeling-and-risk-assessment" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Asset Identification:</strong><br />
+Identify all critical assets such as datasets, model weights, training pipelines, and inference endpoints. Understand the value of these assets from both business and security perspectives.</p></li>
+<li><p><strong>Threat Identification:</strong><br />
+Enumerate potential threats including:</p>
+<ul>
+<li><p><strong>External threats:</strong> Hackers, adversaries attempting model inversion or data exfiltration.</p></li>
+<li><p><strong>Internal threats:</strong> Insider misuse or accidental breaches due to misconfigurations.</p></li>
+<li><p><strong>Adversarial attacks:</strong> Specific to ML such as adversarial examples that could manipulate model predictions.</p></li>
+</ul>
+</li>
+<li><p><strong>Vulnerability Analysis:</strong><br />
+Evaluate the system for vulnerabilities, including insecure API endpoints, unpatched software, and insufficient isolation of components (e.g., segregated development, staging, and production environments).</p></li>
+<li><p><strong>Risk Evaluation:</strong><br />
+Quantify risks based on the likelihood and potential impact of each identified threat. Develop risk mitigation strategies that align with the institution’s risk appetite.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="secure-development-lifecycle-sdl-for-ml">
+<h2>3. <strong>Secure Development Lifecycle (SDL) for ML</strong><a class="headerlink" href="#secure-development-lifecycle-sdl-for-ml" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Security by Design:</strong><br />
+Incorporate security controls from the early stages of model development. This involves secure coding practices, proper access controls, and the use of secure libraries and frameworks.</p></li>
+<li><p><strong>Data Pipeline Security:</strong><br />
+Ensure the data ingestion, pre-processing, and model training pipelines have built-in security controls. This includes:</p>
+<ul>
+<li><p><strong>Data validation:</strong> Check for data integrity and potential injection of malicious data.</p></li>
+<li><p><strong>Encryption:</strong> Secure data during transit and storage.</p></li>
+</ul>
+</li>
+<li><p><strong>Model Security:</strong></p>
+<ul>
+<li><p><strong>Adversarial Robustness:</strong> Implement defenses against adversarial attacks. This might involve adversarial training or monitoring for unusual patterns during inference.</p></li>
+<li><p><strong>Version Control and Model Provenance:</strong> Maintain a secure audit trail for model versions, ensuring that any changes are tracked and can be audited.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="infrastructure-and-network-security">
+<h2>4. <strong>Infrastructure and Network Security</strong><a class="headerlink" href="#infrastructure-and-network-security" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Segmentation and Isolation:</strong><br />
+Deploy the ML application in a segmented network architecture to minimize lateral movement in case of a breach. Use network segmentation to isolate critical components.</p></li>
+<li><p><strong>Access Control:</strong></p>
+<ul>
+<li><p><strong>Authentication and Authorization:</strong> Implement strong multi-factor authentication (MFA) and role-based access control (RBAC) to restrict access to the ML system and its data.</p></li>
+<li><p><strong>Least Privilege:</strong> Ensure that each component, user, and service operates with the minimum level of privileges necessary.</p></li>
+</ul>
+</li>
+<li><p><strong>Secure API Endpoints:</strong><br />
+Use secure communication protocols (e.g., HTTPS/TLS) for all API interactions. Regularly test endpoints for vulnerabilities such as injection flaws or broken authentication.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="monitoring-incident-response-and-continuous-assessment">
+<h2>5. <strong>Monitoring, Incident Response, and Continuous Assessment</strong><a class="headerlink" href="#monitoring-incident-response-and-continuous-assessment" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Security Monitoring:</strong><br />
+Deploy continuous monitoring tools to track anomalous behavior in real-time. This includes:</p>
+<ul>
+<li><p><strong>Log Aggregation and Analysis:</strong> Collect logs from various components (data pipelines, model training servers, inference endpoints) for real-time analysis.</p></li>
+<li><p><strong>Intrusion Detection Systems (IDS):</strong> Use IDS/IPS to detect and respond to potential threats.</p></li>
+</ul>
+</li>
+<li><p><strong>Incident Response Plan:</strong><br />
+Develop and regularly update an incident response plan specific to the ML application. This plan should outline the steps to be taken in the event of a breach, including communication, containment, and remediation procedures.</p></li>
+<li><p><strong>Regular Penetration Testing and Audits:</strong><br />
+Conduct periodic penetration tests, vulnerability scans, and third-party audits to ensure the system remains secure over time. This includes testing both the ML components and the underlying infrastructure.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="documentation-and-training">
+<h2>6. <strong>Documentation and Training</strong><a class="headerlink" href="#documentation-and-training" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Comprehensive Documentation:</strong><br />
+Maintain detailed documentation covering:</p>
+<ul>
+<li><p>The system architecture and data flow.</p></li>
+<li><p>Security controls in place.</p></li>
+<li><p>Compliance mapping to regulatory requirements.</p></li>
+<li><p>Incident response procedures.</p></li>
+</ul>
+</li>
+<li><p><strong>Employee Training:</strong><br />
+Ensure that all stakeholders, from data scientists to IT staff, are trained on the secure handling of data, recognizing security threats, and following best practices for ML security.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>A thorough security assessment for a productionized ML application in a bank is not a one-time activity but an ongoing process. It involves understanding regulatory requirements, identifying and mitigating risks, embedding security into every stage of development, securing the infrastructure, continuous monitoring, and having a robust incident response plan. By taking these comprehensive measures, a financial institution can safeguard its ML applications against threats while complying with regulatory mandates and ensuring the integrity and trustworthiness of its systems.</p>
+</section>
+</section>
+<section id="data-classifiction-standars">
+<h1>Data Classifiction Standars<a class="headerlink" href="#data-classifiction-standars" title="Link to this heading">¶</a></h1>
+<p>Yes, there is a commonly used approach known as a <strong>data classification matrix</strong> that helps organizations, especially in highly regulated environments like banks, to categorize data based on sensitivity, value, and the impact that its compromise could have. This classification is fundamental to ensuring that the appropriate security controls are applied to different types of data.</p>
+<p>Below is an example of a data classification matrix:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Classification Level</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+<th class="head"><p><strong>Examples</strong></p></th>
+<th class="head"><p><strong>Handling Requirements</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Public</strong></p></td>
+<td><p>Data intended for public disclosure; its release poses no risk to the organization or its customers.</p></td>
+<td><p>Press releases, marketing materials, published reports</p></td>
+<td><p>Minimal security; can be freely shared; minimal access controls.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Internal / Unclassified</strong></p></td>
+<td><p>Data meant for internal use only; while not highly sensitive, its unauthorized disclosure could still have a minor impact.</p></td>
+<td><p>Internal policies, non-sensitive operational documents, basic employee directories</p></td>
+<td><p>Limited access; internal distribution only; moderate controls and monitoring.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Confidential</strong></p></td>
+<td><p>Sensitive data that, if compromised, could result in financial or reputational damage; requires significant protection.</p></td>
+<td><p>Customer data, account numbers, internal financial reports, non-public business plans</p></td>
+<td><p>Strong access controls; encryption at rest and in transit; rigorous monitoring and logging; restricted sharing.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Restricted / Highly Confidential</strong></p></td>
+<td><p>Data whose unauthorized disclosure, modification, or loss could cause severe harm, such as significant financial loss or regulatory penalties.</p></td>
+<td><p>Personally Identifiable Information (PII), proprietary algorithms, trade secrets, sensitive regulatory data</p></td>
+<td><p>Highest level of security; strict access controls, multi-factor authentication; comprehensive audit trails; stringent encryption and data handling procedures.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="key-considerations-in-data-classification">
+<h2>Key Considerations in Data Classification:<a class="headerlink" href="#key-considerations-in-data-classification" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Regulatory Requirements:</strong><br />
+Ensure that the classification aligns with legal and regulatory mandates (e.g., GDPR, PCI DSS) regarding the handling and protection of data, especially for customer information and sensitive financial data.</p></li>
+<li><p><strong>Risk Impact:</strong><br />
+Evaluate the potential impact (financial, reputational, operational) if the data were compromised. This risk assessment informs the level of protection needed.</p></li>
+<li><p><strong>Data Lifecycle:</strong><br />
+Consider how data is collected, stored, processed, and transmitted. Each stage should reflect the appropriate classification level and corresponding security measures.</p></li>
+<li><p><strong>Access Control:</strong><br />
+Define who within the organization can access data at each classification level. For example, only specific roles might have access to Restricted or Highly Confidential data.</p></li>
+<li><p><strong>Encryption and Storage:</strong><br />
+Apply suitable encryption protocols for both data at rest and in transit, especially for confidential and restricted data.</p></li>
+<li><p><strong>Audit and Monitoring:</strong><br />
+Implement logging and monitoring to track access and modifications. This is particularly critical for highly sensitive data to ensure compliance and for rapid incident response.</p></li>
+</ol>
+<p>By applying a data classification matrix, banks and financial institutions can clearly define policies, implement appropriate security measures, and ensure that data is handled in a manner that minimizes risk while complying with industry and regulatory standards.</p>
+</section>
+</section>
+<section id="application-classification-standars">
+<h1>Application Classification Standars<a class="headerlink" href="#application-classification-standars" title="Link to this heading">¶</a></h1>
+<p>Banks typically use a risk matrix to classify applications based on the potential impact of a security breach or failure and the likelihood of such an event occurring. This systematic approach enables the institution to prioritize remediation efforts and implement security controls that are commensurate with the risk level. Below is an explanation of how applications are classified in a bank using a risk matrix:</p>
+<hr class="docutils" />
+<section id="risk-matrix-dimensions">
+<h2>1. <strong>Risk Matrix Dimensions</strong><a class="headerlink" href="#risk-matrix-dimensions" title="Link to this heading">¶</a></h2>
+<p>A typical risk matrix has two key dimensions:</p>
+<ul class="simple">
+<li><p><strong>Likelihood (Probability):</strong><br />
+This axis assesses how likely it is that a threat will exploit a vulnerability in the application. It often includes categories such as Low, Medium, and High.</p></li>
+<li><p><strong>Impact (Consequence):</strong><br />
+This axis evaluates the potential severity of the consequences if an incident occurs. Impact might be measured in terms of financial loss, reputational damage, regulatory implications, and operational disruption. Again, common categories are Low, Medium, and High.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="risk-matrix-example">
+<h2>2. <strong>Risk Matrix Example</strong><a class="headerlink" href="#risk-matrix-example" title="Link to this heading">¶</a></h2>
+<p>Here’s an example of a simple risk matrix:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>Low Impact</strong></p></th>
+<th class="head"><p><strong>Medium Impact</strong></p></th>
+<th class="head"><p><strong>High Impact</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Low Likelihood</strong></p></td>
+<td><p>Low Risk (Tolerable)</p></td>
+<td><p>Medium Risk (Mitigate)</p></td>
+<td><p>High Risk (Mitigate and Monitor)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Medium Likelihood</strong></p></td>
+<td><p>Medium Risk (Mitigate)</p></td>
+<td><p>High Risk (Mitigate and Monitor)</p></td>
+<td><p>Very High Risk (Immediate Action)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>High Likelihood</strong></p></td>
+<td><p>High Risk (Mitigate and Monitor)</p></td>
+<td><p>Very High Risk (Immediate Action)</p></td>
+<td><p>Critical Risk (Immediate Action)</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</section>
+<section id="classification-process">
+<h2>3. <strong>Classification Process</strong><a class="headerlink" href="#classification-process" title="Link to this heading">¶</a></h2>
+<p>The process of classifying applications using the risk matrix typically involves the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Asset Identification:</strong><br />
+Identify all applications and understand their purpose, data processed, and business impact. This includes customer-facing apps, internal systems, and third-party integrations.</p></li>
+<li><p><strong>Threat and Vulnerability Analysis:</strong><br />
+Analyze potential threats (e.g., cyberattacks, insider threats) and vulnerabilities (e.g., outdated libraries, weak authentication). Determine how likely these threats are to materialize against the application’s vulnerabilities.</p></li>
+<li><p><strong>Assessing Impact:</strong><br />
+Evaluate the impact if an application were compromised. Factors include:</p>
+<ul class="simple">
+<li><p><strong>Financial Impact:</strong> Direct costs, fines, or loss of revenue.</p></li>
+<li><p><strong>Reputational Impact:</strong> Loss of customer trust or market share.</p></li>
+<li><p><strong>Operational Impact:</strong> Disruption to services or critical business processes.</p></li>
+<li><p><strong>Regulatory Impact:</strong> Breach of compliance requirements leading to legal consequences.</p></li>
+</ul>
+</li>
+<li><p><strong>Determining Likelihood:</strong><br />
+Consider historical data, threat intelligence, and the current security posture to estimate how likely a threat is to occur. Factors might include exposure to the internet, known vulnerabilities, and security controls already in place.</p></li>
+<li><p><strong>Assigning a Risk Rating:</strong><br />
+Based on the above assessments, assign each application a risk rating (e.g., Low, Medium, High, Very High, or Critical). This rating is derived from the intersection of the likelihood and impact scores on the risk matrix.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="application-examples">
+<h2>4. <strong>Application Examples</strong><a class="headerlink" href="#application-examples" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Critical Banking Applications:</strong><br />
+Applications that handle core banking operations, customer transactions, or sensitive personal data typically fall into the <strong>High or Critical</strong> risk categories. They require robust security measures, frequent monitoring, and immediate remediation actions in the event of a threat.</p></li>
+<li><p><strong>Internal Support Applications:</strong><br />
+Applications used for non-critical functions (such as internal scheduling or HR systems) might be classified as <strong>Medium or Low risk</strong>, assuming they do not handle sensitive financial data or personally identifiable information (PII). However, they still need to adhere to baseline security standards.</p></li>
+<li><p><strong>Third-Party Integrations:</strong><br />
+These may also vary in risk depending on the data shared and the security posture of the third party. The bank may consider these applications as <strong>Medium or High risk</strong> if there is potential for data leakage or compliance issues.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="remediation-and-controls-based-on-risk-levels">
+<h2>5. <strong>Remediation and Controls Based on Risk Levels</strong><a class="headerlink" href="#remediation-and-controls-based-on-risk-levels" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Low Risk:</strong><br />
+Standard monitoring and periodic reviews are sufficient. Minimal security controls might be acceptable given the low likelihood and impact.</p></li>
+<li><p><strong>Medium Risk:</strong><br />
+Requires more active monitoring, regular vulnerability assessments, and enhanced security controls such as stronger access management and encryption.</p></li>
+<li><p><strong>High / Very High / Critical Risk:</strong><br />
+Demands immediate remediation, advanced threat detection measures, stringent access controls, and regular penetration testing. Incident response plans should be in place, and senior management might need to be informed about any risks identified.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="ongoing-risk-management">
+<h2>6. <strong>Ongoing Risk Management</strong><a class="headerlink" href="#ongoing-risk-management" title="Link to this heading">¶</a></h2>
+<p>The risk classification isn’t static—banks continuously reassess the risk levels as threat landscapes evolve, business priorities change, or new vulnerabilities are discovered. This proactive approach ensures that all applications remain secure and compliant with regulatory requirements.</p>
+<hr class="docutils" />
+<p>In summary, by classifying applications through a risk matrix, banks can systematically evaluate and prioritize risks, ensuring that the most critical systems receive the highest level of protection and immediate attention if any vulnerabilities or threats are detected.</p>
+</section>
+</section>
+<section id="sample-risk-assessment">
+<h1>Sample Risk Assessment<a class="headerlink" href="#sample-risk-assessment" title="Link to this heading">¶</a></h1>
+<p>Below is the updated risk assessment document that now includes an <strong>Application Classification Estimate</strong> section. This section evaluates the overall application risk based on the architecture, data sensitivity, and security controls implemented throughout the project lifecycle.</p>
+</section>
+<hr class="docutils" />
+<section id="comprehensive-risk-assessment-document">
+<h1>Comprehensive Risk Assessment Document<a class="headerlink" href="#comprehensive-risk-assessment-document" title="Link to this heading">¶</a></h1>
+<p><strong>Project Title:</strong><br />
+Predictive Model for Retail Banking Customer Defaults</p>
+<p><strong>Project Scenario:</strong><br />
+A predictive model is being developed to identify retail banking customers likely to default in the next 3–6 months. This involves collecting sensitive customer data, processing it through various GCP services, training the model, and deploying it in production—all in strict compliance with APRA’s regulatory standards.</p>
+<hr class="docutils" />
+<section id="project-overview-and-data-classification">
+<h2>1. Project Overview and Data Classification<a class="headerlink" href="#project-overview-and-data-classification" title="Link to this heading">¶</a></h2>
+<section id="scenario">
+<h3>1.1 Scenario<a class="headerlink" href="#scenario" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Objective:</strong><br />
+Identify customers likely to default by leveraging historical and real-time data.</p></li>
+<li><p><strong>Components:</strong></p>
+<ul>
+<li><p>Data ingestion using Cloud Storage and Cloud Pub/Sub.</p></li>
+<li><p>Data processing and feature engineering using Cloud Dataflow and BigQuery.</p></li>
+<li><p>Model development using Vertex AI.</p></li>
+<li><p>Model productionization using containerization and deployment on Google Kubernetes Engine (GKE).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="data-classification-handling">
+<h3>1.2 Data Classification &amp; Handling<a class="headerlink" href="#data-classification-handling" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Customer Data</strong></p>
+<ul class="simple">
+<li><p><strong>Classification:</strong> Highly Sensitive (Confidential)</p></li>
+<li><p><strong>Handling:</strong></p>
+<ul>
+<li><p>Encrypt data at rest using Customer-Managed Encryption Keys (CMEK) via Cloud KMS.</p></li>
+<li><p>Encrypt data in transit using HTTPS/TLS.</p></li>
+<li><p>Apply strict IAM policies and maintain comprehensive logging and audit trails.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Intermediate Data &amp; Features</strong></p>
+<ul class="simple">
+<li><p><strong>Classification:</strong> Sensitive</p></li>
+<li><p><strong>Handling:</strong></p>
+<ul>
+<li><p>Use data masking and tokenization.</p></li>
+<li><p>Ensure secure storage (encryption in transit and at rest).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Machine Learning Model</strong></p>
+<ul class="simple">
+<li><p><strong>Classification:</strong> Critical</p></li>
+<li><p><strong>Handling:</strong></p>
+<ul>
+<li><p>Subject the model to rigorous validation, version control, and continuous monitoring.</p></li>
+<li><p>Ensure model artifacts and training logs are secured with encryption and strict access controls.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="application-classification-estimate">
+<h2>2. Application Classification Estimate<a class="headerlink" href="#application-classification-estimate" title="Link to this heading">¶</a></h2>
+<section id="overview">
+<h3>2.1 Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h3>
+<p>Given the nature of the application—which handles highly sensitive customer data, processes it through multiple GCP services, and drives high-stakes decision-making—the overall application risk classification is determined by evaluating both the likelihood of potential threats and the impact of a breach or failure.</p>
+</section>
+<section id="risk-matrix-for-application-classification">
+<h3>2.2 Risk Matrix for Application Classification<a class="headerlink" href="#risk-matrix-for-application-classification" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>Low Impact</strong></p></th>
+<th class="head"><p><strong>Medium Impact</strong></p></th>
+<th class="head"><p><strong>High Impact</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Low Likelihood</strong></p></td>
+<td><p>Low Risk (Acceptable)</p></td>
+<td><p>Medium Risk (Mitigate)</p></td>
+<td><p>High Risk (Mitigate &amp; Monitor)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Medium Likelihood</strong></p></td>
+<td><p>Medium Risk (Mitigate)</p></td>
+<td><p>High Risk (Mitigate &amp; Monitor)</p></td>
+<td><p>Very High Risk (Immediate Action Required)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>High Likelihood</strong></p></td>
+<td><p>High Risk (Mitigate &amp; Monitor)</p></td>
+<td><p>Very High Risk (Immediate Action Required)</p></td>
+<td><p>Critical Risk (Immediate Action Required)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="application-risk-estimate">
+<h3>2.3 Application Risk Estimate<a class="headerlink" href="#application-risk-estimate" title="Link to this heading">¶</a></h3>
+<p>Based on the following considerations:</p>
+<ul class="simple">
+<li><p><strong>Data Sensitivity:</strong><br />
+The application processes highly sensitive customer data (Highly Sensitive/Confidential), which increases the impact of any data breach.</p></li>
+<li><p><strong>Data Flow Complexity:</strong><br />
+Multiple GCP services (Cloud Storage, Pub/Sub, Dataflow, BigQuery, Vertex AI, GKE) introduce additional complexity, thereby increasing the likelihood of misconfiguration or vulnerability if not properly managed.</p></li>
+<li><p><strong>Regulatory Requirements:</strong><br />
+Adherence to APRA’s Prudential Standard CPS 234 mandates rigorous security controls, which mitigates some risks but also indicates the critical nature of the application.</p></li>
+<li><p><strong>Security Controls:</strong><br />
+Comprehensive encryption (both at rest and in transit), strict IAM/RBAC, secure network configurations, continuous monitoring, and audit logging are in place to reduce overall risk.</p></li>
+</ul>
+<p><strong>Estimated Classification:</strong><br />
+Given the above, the overall application classification is determined as <strong>High Risk</strong>.</p>
+<ul class="simple">
+<li><p><strong>Likelihood:</strong> Medium – Given robust security controls, the probability of a breach is mitigated but not zero.</p></li>
+<li><p><strong>Impact:</strong> High – Due to the sensitivity of customer data and the potential for significant financial, operational, and reputational damage if compromised.</p></li>
+</ul>
+<p>This <strong>High Risk</strong> classification necessitates continuous monitoring, periodic re-assessments, and a proactive incident response plan to maintain an acceptable security posture.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="data-ingestion-processing-and-storage-with-security-controls">
+<h2>3. Data Ingestion, Processing, and Storage with Security Controls<a class="headerlink" href="#data-ingestion-processing-and-storage-with-security-controls" title="Link to this heading">¶</a></h2>
+<section id="step-1-data-ingestion">
+<h3>3.1 Step 1: Data Ingestion<a class="headerlink" href="#step-1-data-ingestion" title="Link to this heading">¶</a></h3>
+<section id="cloud-storage">
+<h4>Cloud Storage<a class="headerlink" href="#cloud-storage" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Raw customer data files (CSV, JSON, etc.) are uploaded to regionally hosted Cloud Storage buckets.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption at Rest:</strong></p>
+<ul>
+<li><p>Data is encrypted using CMEK via Cloud KMS.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption in Transit:</strong></p>
+<ul>
+<li><p>Data transfers use HTTPS/TLS.</p></li>
+</ul>
+</li>
+<li><p><strong>Global vs. Local Hosting:</strong></p>
+<ul>
+<li><p><strong>Local:</strong> Data stored in a specific region (e.g., Australia Southeast) minimizes latency and meets local residency requirements.</p></li>
+<li><p><strong>Global:</strong> Multi-region buckets provide redundancy/disaster recovery with consistent encryption.</p></li>
+</ul>
+</li>
+<li><p><strong>Access Controls:</strong></p>
+<ul>
+<li><p>Fine-grained IAM policies restrict bucket access to authorized roles.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cloud-pub-sub">
+<h4>Cloud Pub/Sub<a class="headerlink" href="#cloud-pub-sub" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Facilitates real-time ingestion of streaming customer transaction data.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption:</strong></p>
+<ul>
+<li><p>Data in transit is encrypted using TLS.</p></li>
+</ul>
+</li>
+<li><p><strong>Security:</strong></p>
+<ul>
+<li><p>IAM policies control access to Pub/Sub topics and subscriptions.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-2-data-processing-and-feature-engineering">
+<h3>3.2 Step 2: Data Processing and Feature Engineering<a class="headerlink" href="#step-2-data-processing-and-feature-engineering" title="Link to this heading">¶</a></h3>
+<section id="cloud-dataflow">
+<h4>Cloud Dataflow<a class="headerlink" href="#cloud-dataflow" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Executes ETL operations by reading data from Cloud Storage and Pub/Sub, cleansing and transforming data, and performing feature engineering.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption at Rest:</strong></p>
+<ul>
+<li><p>Intermediate datasets are encrypted using CMEK.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption in Transit:</strong></p>
+<ul>
+<li><p>Dataflow pipelines securely transfer data within the VPC using TLS.</p></li>
+</ul>
+</li>
+<li><p><strong>Additional Controls:</strong></p>
+<ul>
+<li><p><strong>DLP API Integration:</strong> Scans and classifies sensitive data elements to enforce masking or tokenization.</p></li>
+<li><p><strong>Network Security:</strong> Dataflow jobs run within secure VPCs with strict egress controls.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="bigquery">
+<h4>BigQuery<a class="headerlink" href="#bigquery" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Stores processed data for analytics and model training.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption at Rest:</strong></p>
+<ul>
+<li><p>Data is encrypted by default (option to use CMEK for enhanced control).</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption in Transit:</strong></p>
+<ul>
+<li><p>Queries and data transfers are secured with TLS.</p></li>
+</ul>
+</li>
+<li><p><strong>Access Controls:</strong></p>
+<ul>
+<li><p>Column-level security, dataset permissions, and audit logging are employed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-3-data-quality-and-governance">
+<h3>3.3 Step 3: Data Quality and Governance<a class="headerlink" href="#step-3-data-quality-and-governance" title="Link to this heading">¶</a></h3>
+<section id="data-catalog-metadata-management">
+<h4>Data Catalog &amp; Metadata Management<a class="headerlink" href="#data-catalog-metadata-management" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Maintains metadata and data lineage for governance and compliance.</p></li>
+</ul>
+</li>
+<li><p><strong>Security:</strong></p>
+<ul>
+<li><p>Access is controlled via IAM, with all modifications logged for audit purposes.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="model-development-and-productionization">
+<h2>4. Model Development and Productionization<a class="headerlink" href="#model-development-and-productionization" title="Link to this heading">¶</a></h2>
+<section id="step-4-model-development-with-vertex-ai">
+<h3>4.1 Step 4: Model Development with Vertex AI<a class="headerlink" href="#step-4-model-development-with-vertex-ai" title="Link to this heading">¶</a></h3>
+<section id="vertex-ai-notebooks-and-training">
+<h4>Vertex AI Notebooks and Training<a class="headerlink" href="#vertex-ai-notebooks-and-training" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Data scientists use Vertex AI Notebooks to explore data from BigQuery, develop, and prototype the model.</p></li>
+</ul>
+</li>
+<li><p><strong>Training Jobs:</strong></p>
+<ul>
+<li><p>Managed training jobs run in containerized environments.</p></li>
+</ul>
+</li>
+<li><p><strong>Encryption &amp; Security:</strong></p>
+<ul>
+<li><p>Data pulled from BigQuery is encrypted in transit (TLS).</p></li>
+<li><p>Detailed logging and version control ensure model traceability.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-5-model-validation-and-testing">
+<h3>4.2 Step 5: Model Validation and Testing<a class="headerlink" href="#step-5-model-validation-and-testing" title="Link to this heading">¶</a></h3>
+<section id="validation-pipelines">
+<h4>Validation Pipelines<a class="headerlink" href="#validation-pipelines" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Automated pipelines validate model performance (accuracy, precision, recall) and check for bias.</p></li>
+</ul>
+</li>
+<li><p><strong>Governance:</strong></p>
+<ul>
+<li><p>Validation results, logs, and metrics are stored securely with restricted access and audit trails.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-6-containerization-and-production-deployment-with-gke">
+<h3>4.3 Step 6: Containerization and Production Deployment with GKE<a class="headerlink" href="#step-6-containerization-and-production-deployment-with-gke" title="Link to this heading">¶</a></h3>
+<section id="containerization">
+<h4>Containerization<a class="headerlink" href="#containerization" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Package the trained model into Docker containers for consistent deployment.</p></li>
+</ul>
+</li>
+<li><p><strong>Security:</strong></p>
+<ul>
+<li><p>Containers are scanned for vulnerabilities and adhere to secure software supply chain best practices.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="google-kubernetes-engine-gke">
+<h4>Google Kubernetes Engine (GKE)<a class="headerlink" href="#google-kubernetes-engine-gke" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Usage:</strong></p>
+<ul>
+<li><p>Deploy the containerized model for production serving.</p></li>
+</ul>
+</li>
+<li><p><strong>Networking &amp; Security:</strong></p>
+<ul>
+<li><p><strong>Cluster Security:</strong> Deployed in private VPCs with pod security and network policies.</p></li>
+<li><p><strong>Encryption at Rest:</strong> Kubernetes secrets and persistent volumes are encrypted.</p></li>
+<li><p><strong>Encryption in Transit:</strong> Communication is secured using mTLS and HTTPS.</p></li>
+<li><p><strong>Ingress &amp; Egress:</strong> HTTPS load balancers provide secure global access; internal communications use private IPs.</p></li>
+</ul>
+</li>
+<li><p><strong>Access Controls:</strong></p>
+<ul>
+<li><p>RBAC policies and IAM roles enforce the principle of least privilege.</p></li>
+</ul>
+</li>
+<li><p><strong>Monitoring:</strong></p>
+<ul>
+<li><p>Cloud Monitoring &amp; Logging track performance and logs, with automated alerts for anomalies.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="identified-risks-controls-and-mitigation-strategies">
+<h2>5. Identified Risks, Controls, and Mitigation Strategies<a class="headerlink" href="#identified-risks-controls-and-mitigation-strategies" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Risk ID</strong></p></th>
+<th class="head"><p><strong>Risk Description</strong></p></th>
+<th class="head"><p><strong>Affected Component</strong></p></th>
+<th class="head"><p><strong>Likelihood</strong></p></th>
+<th class="head"><p><strong>Impact</strong></p></th>
+<th class="head"><p><strong>Controls/Mitigation</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>R1</strong></p></td>
+<td><p>Unauthorized access to raw customer data</p></td>
+<td><p>Cloud Storage</p></td>
+<td><p>Medium</p></td>
+<td><p>High (Highly Sensitive data compromise)</p></td>
+<td><p>- Enforce fine-grained IAM policies.<br> - Encrypt data at rest (CMEK) and in transit (HTTPS/TLS).<br> - Regular audits and logging.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>R2</strong></p></td>
+<td><p>Data tampering during transit</p></td>
+<td><p>Cloud Storage &amp; Pub/Sub</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+<td><p>- Use HTTPS/TLS for all transfers.<br> - Implement integrity checks (hashing).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>R3</strong></p></td>
+<td><p>Unauthorized access/manipulation of streaming data</p></td>
+<td><p>Cloud Pub/Sub</p></td>
+<td><p>Medium</p></td>
+<td><p>Medium</p></td>
+<td><p>- Strict IAM policies for Pub/Sub topics/subscriptions.<br> - TLS encryption.<br> - Monitor logs for anomalies.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>R4</strong></p></td>
+<td><p>Leakage of sensitive data during ETL</p></td>
+<td><p>Cloud Dataflow</p></td>
+<td><p>Medium</p></td>
+<td><p>High</p></td>
+<td><p>- Execute Dataflow jobs in secure VPCs with strict egress controls.<br> - Encrypt intermediate data using CMEK.<br> - Use DLP API for masking/tokenization.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>R5</strong></p></td>
+<td><p>Inadequate data governance and lineage tracking</p></td>
+<td><p>Data Catalog</p></td>
+<td><p>Low</p></td>
+<td><p>Medium</p></td>
+<td><p>- Enforce IAM controls on Data Catalog.<br> - Log all metadata modifications.<br> - Regular reviews of data lineage.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>R6</strong></p></td>
+<td><p>Exposure of sensitive data during model training</p></td>
+<td><p>Vertex AI</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+<td><p>- Secure data transfers (TLS) from BigQuery to Vertex AI.<br> - Enforce RBAC and IAM.<br> - Monitor training environments and restrict data exports.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>R7</strong></p></td>
+<td><p>Model poisoning or adversarial attacks</p></td>
+<td><p>Vertex AI &amp; Training Pipelines</p></td>
+<td><p>Medium</p></td>
+<td><p>Critical</p></td>
+<td><p>- Implement robust model validation and performance testing.<br> - Monitor training data quality and detect anomalies.<br> - Regular updates and patching.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>R8</strong></p></td>
+<td><p>Vulnerabilities in container images</p></td>
+<td><p>Docker Containers</p></td>
+<td><p>Medium</p></td>
+<td><p>High</p></td>
+<td><p>- Perform vulnerability scans on Docker images before deployment.<br> - Follow secure containerization practices.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>R9</strong></p></td>
+<td><p>Insecure communication within/outside GKE clusters</p></td>
+<td><p>GKE Deployment</p></td>
+<td><p>Medium</p></td>
+<td><p>High</p></td>
+<td><p>- Enforce mTLS and HTTPS.<br> - Deploy GKE in private VPCs with pod/network policies.<br> - Regularly update and patch clusters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>R10</strong></p></td>
+<td><p>Delayed detection of security incidents</p></td>
+<td><p>Monitoring &amp; Logging (Cloud Monitoring, Audit Logs)</p></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+<td><p>- Deploy continuous monitoring with Cloud Monitoring and Logging.<br> - Set up automated alerts for anomalies.<br> - Regular testing of the incident response plan.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="industry-best-practices-regulatory-alignment">
+<h2>6. Industry Best Practices &amp; Regulatory Alignment<a class="headerlink" href="#industry-best-practices-regulatory-alignment" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Encryption &amp; Key Management:</strong></p>
+<ul>
+<li><p>Use CMEK via Cloud KMS for Cloud Storage, BigQuery, and Kubernetes persistent volumes.</p></li>
+<li><p>Ensure all data transfers use TLS/HTTPS; enforce mTLS within GKE.</p></li>
+</ul>
+</li>
+<li><p><strong>Access Management:</strong></p>
+<ul>
+<li><p>Apply strict IAM and RBAC policies across all GCP services, adhering to the principle of least privilege.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Minimization &amp; Governance:</strong></p>
+<ul>
+<li><p>Only process and store data essential for the predictive model.</p></li>
+<li><p>Use Data Catalog for complete metadata management.</p></li>
+</ul>
+</li>
+<li><p><strong>Audit &amp; Monitoring:</strong></p>
+<ul>
+<li><p>Leverage Cloud Audit Logs, Cloud Monitoring, and Cloud Logging to track data access and movement in compliance with APRA’s CPS 234.</p></li>
+</ul>
+</li>
+<li><p><strong>Regulatory Compliance:</strong></p>
+<ul>
+<li><p>Ensure that all operations comply with APRA’s Prudential Standard CPS 234 and relevant local data residency/privacy requirements.</p></li>
+<li><p>Regular reviews and updated incident response plans are mandatory.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="conclusion-and-recommendations">
+<h2>7. Conclusion and Recommendations<a class="headerlink" href="#conclusion-and-recommendations" title="Link to this heading">¶</a></h2>
+<section id="summary">
+<h3>7.1 Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h3>
+<p>This risk assessment incorporates the concrete architectural and operational details of the project—from data ingestion to processing, model development, and production deployment—while ensuring strict adherence to APRA’s data classification and security standards. The overall application is classified as <strong>High Risk</strong> based on the sensitivity of customer data and the potential impact of any breach.</p>
+</section>
+<section id="recommendations-action-items">
+<h3>7.2 Recommendations &amp; Action Items<a class="headerlink" href="#recommendations-action-items" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Enforce and Audit Access Controls:</strong><br />
+Regularly review IAM and RBAC policies on Cloud Storage, Pub/Sub, BigQuery, Vertex AI, and GKE.</p></li>
+<li><p><strong>Regular Vulnerability &amp; Penetration Testing:</strong><br />
+Schedule periodic scans and tests across all components.</p></li>
+<li><p><strong>Enhance Incident Response:</strong><br />
+Update and test incident response plans regularly for rapid detection and mitigation.</p></li>
+<li><p><strong>Continuous Monitoring:</strong><br />
+Ensure that Cloud Monitoring, Logging, and Audit Logs are active 24/7 and integrated with alerting systems.</p></li>
+<li><p><strong>Ongoing Compliance Reviews:</strong><br />
+Periodically verify that security measures meet APRA’s standards and address any new regulatory requirements.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="appendices">
+<h2>8. Appendices<a class="headerlink" href="#appendices" title="Link to this heading">¶</a></h2>
+<section id="appendix-a-detailed-risk-matrix">
+<h3>Appendix A: Detailed Risk Matrix<a class="headerlink" href="#appendix-a-detailed-risk-matrix" title="Link to this heading">¶</a></h3>
+<p><em>(Refer to Section 2.2 and Section 5 for details.)</em></p>
+</section>
+<section id="appendix-b-control-checklist">
+<h3>Appendix B: Control Checklist<a class="headerlink" href="#appendix-b-control-checklist" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Data Ingestion:</strong> CMEK, HTTPS/TLS, IAM policies</p></li>
+<li><p><strong>Data Processing:</strong> Secure VPCs, DLP API, encryption for Dataflow and BigQuery</p></li>
+<li><p><strong>Model Development:</strong> TLS for Vertex AI, detailed logging, version control</p></li>
+<li><p><strong>Production Deployment:</strong> Secure Docker practices, GKE with mTLS/HTTPS, private VPC, RBAC/IAM</p></li>
+<li><p><strong>Monitoring:</strong> Cloud Monitoring, Logging, Audit Logs, automated alerts</p></li>
+</ul>
+</section>
+<section id="appendix-c-regulatory-and-best-practice-references">
+<h3>Appendix C: Regulatory and Best Practice References<a class="headerlink" href="#appendix-c-regulatory-and-best-practice-references" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>APRA Prudential Standard CPS 234</p></li>
+<li><p>GCP Security Best Practices</p></li>
+<li><p>Industry standards for encryption, access management, and data governance</p></li>
+</ul>
+<hr class="docutils" />
+<p>This document, including the <strong>Application Classification Estimate</strong>, should be reviewed periodically and updated to reflect any changes in technology, threat landscape, or regulatory requirements, ensuring continuous alignment with APRA’s security standards and best practices.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, Hao Mai.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>
