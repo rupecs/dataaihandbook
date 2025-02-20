@@ -1,20 +1,29 @@
+.. _Understanding_Probability_Distributions:
+
+===============================
 Understanding Probability Distributions: A Comprehensive Guide
-==============================================================
+===============================
 
-Probability distributions describe how random variables behave and play a fundamental role in statistics, probability theory, and real-world data modeling. This book provides a detailed exploration of the most important probability distributions, their derivations, and their physical interpretations. We will also discuss how some distributions extend or generalize from others, creating a rich hierarchy of probability models.
-
-Bernoulli Trials
-----------------
+.. contents:: Table of Contents
+   :depth: 2
 
 Introduction
-~~~~~~~~~~~~
+============
 
-A Bernoulli trial is a fundamental concept in probability theory that represents a single experiment or event with only two possible outcomes: success (1) or failure (0). The probability of success is denoted by \( p \), while the probability of failure is \( 1 - p \). Bernoulli trials are the building blocks of more complex probability distributions, including the binomial and geometric distributions.
+Probability distributions describe how random variables behave and play a fundamental role in statistics, probability theory, and real-world data modeling. This document provides a detailed exploration of the most important probability distributions, their derivations, and their physical interpretations. We will also discuss how some distributions extend or generalize from others, creating a rich hierarchy of probability models.
+
+Bernoulli Trials
+================
+
+Introduction
+------------
+
+A Bernoulli trial is a fundamental concept in probability theory that represents a single experiment or event with only two possible outcomes: success (1) or failure (0). The probability of success is denoted by :math:`p`, while the probability of failure is :math:`1 - p`. Bernoulli trials are the building blocks of more complex probability distributions, including the binomial and geometric distributions.
 
 Mathematical Definition
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
-A random variable \( X \) follows a Bernoulli distribution if it takes the values:
+A random variable :math:`X` follows a Bernoulli distribution if it takes the values:
 
 .. math::
 
@@ -22,8 +31,8 @@ A random variable \( X \) follows a Bernoulli distribution if it takes the value
 
 where:
 
-- \( p \) is the probability of success (\( 0 \leq p \leq 1 \)),
-- \( 1 - p \) is the probability of failure.
+- :math:`p` is the probability of success (:math:`0 \leq p \leq 1`),
+- :math:`1 - p` is the probability of failure.
 
 The probability mass function (PMF) of a Bernoulli trial is given by:
 
@@ -32,29 +41,29 @@ The probability mass function (PMF) of a Bernoulli trial is given by:
    P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0,1\}
 
 Properties of the Bernoulli Distribution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
-- **Mean:** \( E[X] = p \)
-- **Variance:** \( \text{Var}(X) = p(1 - p) \)
-- **Mode:** \( 1 \) if \( p > 0.5 \), else \( 0 \)
-- **Skewness:** \( \frac{1 - 2p}{\sqrt{p(1 - p)}} \)
-- **Kurtosis:** \( \frac{6p^2 - 6p + 1}{p(1 - p)} \)
+- **Mean:** :math:`E[X] = p`
+- **Variance:** :math:`\text{Var}(X) = p(1 - p)`
+- **Mode:** :math:`1` if :math:`p > 0.5`, else :math:`0`
+- **Skewness:** :math:`\frac{1 - 2p}{\sqrt{p(1 - p)}}`
+- **Kurtosis:** :math:`\frac{6p^2 - 6p + 1}{p(1 - p)}`
 
 Relation to Other Distributions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
-- **Binomial Distribution:** The sum of \( n \) independent Bernoulli trials forms a binomial distribution.
+- **Binomial Distribution:** The sum of :math:`n` independent Bernoulli trials forms a binomial distribution.
 - **Geometric Distribution:** The number of Bernoulli trials needed to get the first success follows a geometric distribution.
-- **Poisson Approximation:** For small \( p \) and large \( n \), the sum of Bernoulli trials approximates a Poisson distribution.
+- **Poisson Approximation:** For small :math:`p` and large :math:`n`, the sum of Bernoulli trials approximates a Poisson distribution.
 
 Worked Example
-~~~~~~~~~~~~~~
+--------------
 
-**Problem:** Suppose a fair coin (\( p = 0.5 \)) is flipped once. What is the probability of getting heads?
+**Problem:** Suppose a fair coin (:math:`p = 0.5`) is flipped once. What is the probability of getting heads?
 
 **Solution:**
 
-Here, \( X \) follows a Bernoulli distribution with \( p = 0.5 \). The probability of getting heads (success) is:
+Here, :math:`X` follows a Bernoulli distribution with :math:`p = 0.5`. The probability of getting heads (success) is:
 
 .. math::
 
@@ -69,7 +78,7 @@ Similarly, the probability of getting tails (failure) is:
 Thus, for a fair coin, the probability of getting heads or tails in a single Bernoulli trial is **50%**.
 
 Applications of Bernoulli Trials
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 - **Quality Control:** Testing whether a product meets a certain standard.
 - **Medical Trials:** Determining whether a treatment is successful or not.
