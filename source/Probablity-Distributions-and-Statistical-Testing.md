@@ -28,11 +28,16 @@ $$
 
 ### Properties of the Bernoulli Distribution
 
-- **Mean:** $ E[X] = p $
-- **Variance:** $ \text{Var}(X) = p(1 - p) $
-- **Mode:** $ 1 $ if $ p > 0.5 $, else $ 0 $
-- **Skewness:** $ \frac{1 - 2p}{\sqrt{p(1 - p)}} $
-- **Kurtosis:** $ \frac{6p^2 - 6p + 1}{p(1 - p)} $
+- **Mean:** 
+  $$ E[X] = p $$
+- **Variance:** 
+  $$ \text{Var}(X) = p(1 - p) $$
+- **Mode:** 
+  $$ 1 \text{ if } p > 0.5, \text{ else } 0 $$
+- **Skewness:** 
+  $$ \frac{1 - 2p}{\sqrt{p(1 - p)}} $$
+- **Kurtosis:** 
+  $$ \frac{6p^2 - 6p + 1}{p(1 - p)} $$
 
 ### Relation to Other Distributions
 
