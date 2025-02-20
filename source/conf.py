@@ -1,62 +1,32 @@
 # Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
-
-import sphinx_press_theme  # Add this line
-extensions = [
-    'sphinx.ext.mathjax',  # This enables MathJax for rendering equations
-]
-
-html_theme = "press"
-# html_theme_path = [sphinx_press_theme.get_html_theme_path()]
-
-# -- Project information -----------------------------------------------------
-
+# -- Project Information -----------------------------------------------------
 project = 'Sphinx-with-Github-Pages'
 copyright = '2021, Hao Mai'
 author = 'Hao Mai'
 
-
-# -- General configuration ---------------------------------------------------
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
+# -- General Configuration ---------------------------------------------------
 extensions = [
-    'myst_parser',  # Add this line for Markdown support
+    'myst_parser',  # Enable Markdown support
+    'sphinx.ext.mathjax',  # Enable MathJax for equations
+    'sphinx.ext.autodoc',  # Automatic documentation from docstrings
+    'sphinx.ext.napoleon',  # Google-style docstrings support
 ]
 
-# Add any paths that contain templates here, relative to this directory.
+# Define file suffixes that Sphinx should recognize
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
+
+# Add paths for templates
 templates_path = ['_templates']
 
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
+# List of patterns to exclude from documentation
 exclude_patterns = []
 
+# -- HTML Output Options -----------------------------------------------------
+html_theme = "press"  # Use Press theme
 
-# -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon']
-# html_theme = 'press'
-# html_theme_path = [sphinx_press_theme.get_html_theme_path()]
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
+# Add paths for custom static files
 html_static_path = ['_static']
