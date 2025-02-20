@@ -6,11 +6,10 @@
 .. image:: /Images/homepage.png
   :align: center
 
-Welcome to Sphinx with GitHub's documentation!
+Welcome to Data & AI Handbook
 ==============================================
 
-This is a quick tutorial to introduce how to use Sphinx to auto create
-a GitHub Pages documentation.
+This is a handbook for data scientists.
 
 .. toctree::
    :maxdepth: 1
@@ -20,10 +19,11 @@ a GitHub Pages documentation.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Getting Started
+   :caption: Fundamental Concepts
 
-   install
    project_in_cost_perspective
+   understanding_probability_distributions
+   statistical_inference
 
 .. toctree::
    :maxdepth: 2
