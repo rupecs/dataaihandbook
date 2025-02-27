@@ -1,8 +1,8 @@
 .. _random_forests:
 
-##########################
+######################################
 Comprehensive Guide to Random Forests
-##########################
+######################################
 
 .. contents:: Table of Contents
    :local:
